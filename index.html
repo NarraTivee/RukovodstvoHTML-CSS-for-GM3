@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современный учебник HTML5 & CSS3</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+
+<body>
+    <!-- Боковая панель навигации -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-code"></i> HTML5 & CSS3</h2>
+            <button id="sidebarClose" class="sidebar-close"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Главная</a></li>
+            <li><a href="#html-structure"><i class="fab fa-html5"></i> Структура HTML</a></li>
+            <li><a href="#text-formatting"><i class="fas fa-text-height"></i> Текст и форматирование</a></li>
+            <li><a href="#css-basics"><i class="fab fa-css3-alt"></i> Основы CSS</a></li>
+            <li><a href="#layout"><i class="fas fa-th"></i> Верстка и позиционирование</a></li>
+            <li><a href="#multimedia"><i class="fas fa-photo-video"></i> Мультимедиа</a></li>
+            <li><a href="#advanced-css"><i class="fas fa-star"></i> Продвинутый CSS</a></li>
+            <li><a href="#design"><i class="fas fa-palette"></i> Визуальный дизайн</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p>Прогресс обучения</p>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main id="mainContent" class="main-content">
+        <!-- Мобильный заголовок -->
+        <header class="mobile-header">
+            <button id="sidebarToggle" class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1>Современный учебник веб-разработки</h1>
+        </header>
+
+        <!-- Герой-секция -->
+        <section id="home" class="section hero-section">
+            <div class="hero-content animate-on-scroll">
+                <h1 class="hero-title">Освойте современные <span class="html-text">HTML5</span> и <span
+                        class="css-text">CSS3</span></h1>
+                <p class="hero-subtitle">Полный учебник с интерактивными примерами, анимациями и современными принципами
+                    дизайна</p>
+                <a href="#html-structure" class="cta-button">Начать обучение <i class="fas fa-arrow-down"></i></a>
+            </div>
+            <div class="hero-animation">
+                <div class="code-block">
+                    <div class="code-line"><span class="tag">&lt;html&gt;</span></div>
+                    <div class="code-line"><span class="tag">&lt;body&gt;</span></div>
+                    <div class="code-line indent-1"><span class="tag">&lt;h1&gt;</span>Добро пожаловать!<span
+                            class="tag">&lt;/h1&gt;</span></div>
+                    <div class="code-line"><span class="tag">&lt;/body&gt;</span></div>
+                    <div class="code-line"><span class="tag">&lt;/html&gt;</span></div>
+                </div>
+            </div>
+            <!-- Информация разработчика в правом нижнем углу героя -->
+            <div class="hero-developer-info">
+                <p><strong>Разработчик:</strong> Калабук Илья Александрович, 11A</p>
+                <p><strong>Год выпуска:</strong> 2026</p>
+            </div>
+        </section>
+
+        <!-- Структура HTML -->
+        <section id="html-structure" class="section">
+            <h2 class="section-title"><i class="fab fa-html5"></i> Структура HTML документа</h2>
+
+            <div class="content-card animate-on-scroll">
+                <h3>Базовая структура HTML5 документа</h3>
+                <p>Каждый HTML5 документ имеет определенную структуру, включающую важные элементы. Понимание этой
+                    структуры является основой веб-разработки.</p>
+
+                <div class="example-container">
+                    <div class="code-example">
+                        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Заголовок страницы&lt;/title&gt;
+    &lt;!-- Внешний CSS --&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;!-- Внутренний CSS --&gt;
+    &lt;style&gt;
+        body { font-family: Arial, sans-serif; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Мой первый заголовок&lt;/h1&gt;
+    &lt;p&gt;Мой первый параграф.&lt;/p&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="explanation">
+                    <div class="explanation-item">
+                        <h4><code>&lt;!DOCTYPE html&gt;</code></h4>
+                        <p><strong>Объявление типа документа</strong> - Определяет документ как HTML5. Это первая строка
+                            в любом HTML5 документе.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><code>&lt;html&gt;</code> тег</h4>
+                        <p><strong>Корневой элемент</strong> - Контейнер для всех других HTML элементов (кроме
+                            !DOCTYPE). Атрибут <code>lang</code> определяет язык.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><code>&lt;head&gt;</code> секция</h4>
+                        <p><strong>Метаданные документа</strong> - Содержит метаинформацию, заголовок, ссылки на стили и
+                            скрипты.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><code>&lt;title&gt;</code> тег</h4>
+                        <p><strong>Заголовок страницы</strong> - Определяет заголовок веб-страницы в браузере и
+                            поисковых системах.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><code>&lt;meta&gt;</code> теги</h4>
+                        <p><strong>Метаданные</strong> - Предоставляют информацию о HTML документе:</p>
+                        <ul>
+                            <li><code>charset="UTF-8"</code> - Кодировка символов</li>
+                            <li><code>viewport</code> - Адаптивность на мобильных</li>
+                            <li><code>description</code> - Описание для SEO</li>
+                            <li><code>keywords</code> - Ключевые слова</li>
+                        </ul>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><code>&lt;body&gt;</code> тег</h4>
+                        <p><strong>Тело документа</strong> - Содержит весь видимый контент страницы: текст, изображения,
+                            ссылки и т.д.</p>
+                    </div>
+                </div>
+
+                <div class="demo-box">
+                    <h4>Живой пример:</h4>
+                    <p>Эта страница является HTML5 документом. Нажмите правой кнопкой и выберите "Просмотреть исходный
+                        код" для полной структуры.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форматирование текста -->
+        <section id="text-formatting" class="section">
+            <h2 class="section-title"><i class="fas fa-text-height"></i> Форматирование текста и ссылки</h2>
+
+            <div class="content-row">
+                <div class="content-card animate-on-scroll">
+                    <h3>Заголовки и параграфы</h3>
+                    <p>HTML предоставляет семантические элементы заголовков для создания структуры документа.</p>
+
+                    <div class="demo-box">
+                        <h1>Это h1 (Главный заголовок)</h1>
+                        <p>H1 должен использоваться один раз на странице как основной заголовок.</p>
+
+                        <h2>Это h2 (Заголовок секции)</h2>
+                        <p>H2 элементы определяют основные секции контента.</p>
+
+                        <h3>Это h3 (Подзагловок)</h3>
+                        <p>H3 элементы разделяют секции на подсекции.</p>
+
+                        <h4>Это h4 (Мелкий заголовок)</h4>
+                        <h5>Это h5 (Маленький заголовок)</h5>
+                        <h6>Это h6 (Самый маленький заголовок)</h6>
+
+                        <p>Это обычный параграф с тегом <code>&lt;p&gt;</code>.</p>
+
+                        <hr>
+                        <p>Выше горизонтальная линия с тегом <code>&lt;hr&gt;</code>.</p>
+                    </div>
+
+                    <div class="example-container">
+                        <button class="show-code-btn demo-btn" data-target="headings-code">Показать пример кода</button>
+                        <div id="headings-code" class="code-example hidden">
+                            <pre><code class="html">&lt;!-- Пример использования заголовков h1-h6 --&gt;
+&lt;h1&gt;Главный заголовок страницы&lt;/h1&gt;
+&lt;p&gt;Это основной контент страницы.&lt;/p&gt;
+
+&lt;h2&gt;Заголовок первой секции&lt;/h2&gt;
+&lt;p&gt;Текст первой секции...&lt;/p&gt;
+
+&lt;h3&gt;Подзаголовок в первой секции&lt;/h3&gt;
+&lt;p&gt;Дополнительный текст...&lt;/p&gt;
+
+&lt;h2&gt;Заголовок второй секции&lt;/h2&gt;
+&lt;p&gt;Текст второй секции...&lt;/p&gt;
+
+&lt;h4&gt;Дополнительный заголовок&lt;/h4&gt;
+&lt;h5&gt;Мелкий заголовок&lt;/h5&gt;
+&lt;h6&gt;Самый маленький заголовок&lt;/h6&gt;
+
+&lt;hr&gt; &lt;!-- Горизонтальная линия --&gt;
+&lt;p&gt;Текст после разделительной линии.&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card animate-on-scroll">
+                    <h3>Выравнивание текста</h3>
+                    <p>CSS контролирует выравнивание, а HTML предоставляет семантические элементы для текста.</p>
+
+                    <div class="demo-box">
+                        <h4>Примеры выравнивания:</h4>
+                        <p class="text-left"><strong>По левому краю (по умолчанию):</strong> Этот текст выровнен по
+                            левому краю.</p>
+                        <p class="text-center"><strong>По центру:</strong> Этот текст выровнен по центру.</p>
+                        <p class="text-right"><strong>По правому краю:</strong> Этот текст выровнен по правому краю.</p>
+
+                        <h4>Семантические элементы:</h4>
+                        <p><strong>Жирный:</strong> <b>Это жирный текст</b> через <code>&lt;b&gt;</code> vs <strong>это
+                                важный текст</strong> через <code>&lt;strong&gt;</code>.</p>
+                        <p><em>Курсивный текст</em> через <code>&lt;em&gt;</code> vs <i>курсивный текст</i> через
+                            <code>&lt;i&gt;</code>.
+                        </p>
+
+                        <h4>Ссылки (Тег &lt;a&gt;)</h4>
+                        <div class="link-demo">
+                            <a href="#home" class="regular-link">Обычная ссылка</a>
+                            <a href="#home" class="styled-link" target="_blank">Стилизованная ссылка</a>
+                            <a href="#home" class="button-link">Кнопка-ссылка</a>
+                            <a href="mailto:example@email.com" class="mail-link">Email ссылка</a>
+                        </div>
+                    </div>
+
+                    <div class="example-container">
+                        <button class="show-code-btn demo-btn" data-target="text-align-code">Показать пример
+                            кода</button>
+                        <div id="text-align-code" class="code-example hidden">
+                            <pre><code class="html">&lt;!-- Пример выравнивания текста с помощью CSS --&gt;
+&lt;style&gt;
+    .text-left {
+        text-align: left;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .text-right {
+        text-align: right;
+    }
+&lt;/style&gt;
+
+&lt;!-- Примеры в HTML --&gt;
+&lt;p class="text-left"&gt;Текст по левому краю&lt;/p&gt;
+&lt;p class="text-center"&gt;Текст по центру&lt;/p&gt;
+&lt;p class="text-right"&gt;Текст по правому краю&lt;/p&gt;
+
+&lt;!-- Семантические элементы --&gt;
+&lt;p&gt;&lt;b&gt;Просто жирный текст&lt;/b&gt; и &lt;strong&gt;важный текст&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Просто курсив&lt;/i&gt; и &lt;em&gt;акцентированный текст&lt;/em&gt;&lt;/p&gt;
+
+&lt;!-- Примеры ссылок --&gt;
+&lt;a href="index.html"&gt;Обычная ссылка&lt;/a&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Ссылка в новом окне&lt;/a&gt;
+&lt;a href="mailto:email@example.com"&gt;Ссылка для отправки email&lt;/a&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card animate-on-scroll">
+                <h3>Тег span и атрибут id</h3>
+                <div class="content-row">
+                    <div class="explanation-item">
+                        <h4><code>&lt;span&gt;</code> тег</h4>
+                        <p><strong>Встроенный контейнер</strong> - Тег <code>&lt;span&gt;</code> это встроенный
+                            контейнер для разметки части текста.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><code>id</code> атрибут</h4>
+                        <p><strong>Уникальный идентификатор</strong> - Атрибут <code>id</code> определяет уникальный
+                            идентификатор для элемента.</p>
+                    </div>
+                </div>
+
+                <div class="demo-box">
+                    <h4>Живые примеры:</h4>
+                    <p>Это параграф с <span class="highlight">выделенным span</span> внутри.</p>
+                    <p>Это параграф с <span id="unique-span">span с уникальным ID</span>.</p>
+                    <div class="demo-controls">
+                        <button id="colorChangeBtn" class="demo-btn">Изменить цвет</button>
+                        <button id="toggleHighlightBtn" class="demo-btn">Переключить выделение</button>
+                        <button class="show-code-btn demo-btn" data-target="span-code">Показать пример кода</button>
+                    </div>
+                </div>
+
+                <div id="span-code" class="code-example hidden">
+                    <pre><code class="html">&lt;!-- Пример использования тега span --&gt;
+&lt;p&gt;Это параграф с &lt;span class="highlight"&gt;выделенным текстом&lt;/span&gt; внутри.&lt;/p&gt;
+
+&lt;!-- Пример использования атрибута id --&gt;
+&lt;p&gt;Это параграф с &lt;span id="unique-span"&gt;уникальным элементом&lt;/span&gt;.&lt;/p&gt;
+
+&lt;!-- CSS для стилизации --&gt;
+&lt;style&gt;
+    /* Стили для класса highlight */
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        padding: 2px 5px;
+    }
+    
+    /* Стили для элемента с id */
+    #unique-span {
+        color: blue;
+        text-decoration: underline;
+    }
+&lt;/style&gt;
+
+&lt;!-- JavaScript для взаимодействия --&gt;
+&lt;script&gt;
+    // Получить элемент по id
+    const uniqueSpan = document.getElementById('unique-span');
+    
+    // Изменить стиль элемента
+    function changeSpanColor() {
+        uniqueSpan.style.color = 'red';
+    }
+&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основы CSS -->
+        <section id="css-basics" class="section">
+            <h2 class="section-title"><i class="fab fa-css3-alt"></i> Основы и стилизация CSS</h2>
+
+            <div class="content-card animate-on-scroll">
+                <h3>Каскадные таблицы стилей (CSS)</h3>
+                <p>CSS описывает как HTML элементы должны отображаться на экране, бумаге или других медиа.</p>
+                <p><strong>Способы подключения CSS к HTML файлу:</strong></p>
+
+                <div class="css-methods">
+                    <div class="method-card">
+                        <h4>1. Внешний CSS</h4>
+                        <p><strong>Самый распространенный</strong> - Ссылка на внешний .css файл.</p>
+                        <div class="code-example">
+                            <pre><code class="html">&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="method-card">
+                        <h4>2. Внутренний CSS</h4>
+                        <p>Использование элемента <code>&lt;style&gt;</code> в секции <code>&lt;head&gt;</code>.</p>
+                        <div class="code-example">
+                            <pre><code class="html">&lt;style&gt;
+    body { background-color: lightblue; }
+&lt;/style&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="method-card">
+                        <h4>3. Встроенный CSS</h4>
+                        <p>Использование атрибута <code>style</code> в HTML элементах.</p>
+                        <div class="code-example">
+                            <pre><code class="html">&lt;h1 style="color:blue;"&gt;Заголовок&lt;/h1&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="content-card animate-on-scroll">
+                    <h3>Свойства шрифтов</h3>
+                    <p>CSS предоставляет контроль над внешним видом текста через различные свойства шрифтов.</p>
+
+                    <div class="demo-box font-demo">
+                        <p class="font-example" id="fontFamily">font-family: 'Poppins', sans-serif</p>
+                        <p class="font-example" id="fontSize">font-size: 24px</p>
+                        <p class="font-example" id="fontStyle">font-style: italic</p>
+                        <p class="font-example" id="fontWeight">font-weight: bold</p>
+                    </div>
+
+                    <div class="demo-controls">
+                        <button id="changeFontFamilyBtn" class="demo-btn">Изменить шрифт</button>
+                        <button id="changeFontSizeBtn" class="demo-btn">Изменить размер</button>
+                        <button id="toggleFontStyleBtn" class="demo-btn">Курсив</button>
+                        <button id="toggleFontWeightBtn" class="demo-btn">Жирный</button>
+                        <button class="show-code-btn demo-btn" data-target="font-code">Показать код</button>
+                    </div>
+
+                    <div id="font-code" class="code-example hidden">
+                        <pre><code class="css">/* Примеры CSS свойств для шрифтов */
+
+/* 1. Изменение шрифта */
+#fontFamily {
+    font-family: 'Georgia', serif; /* Изменяем шрифт */
+}
+
+/* 2. Изменение размера шрифта */
+#fontSize {
+    font-size: 32px; /* Увеличиваем размер */
+}
+
+/* 3. Изменение стиля шрифта */
+#fontStyle {
+    font-style: italic; /* Делаем курсив */
+}
+
+/* 4. Изменение толщины шрифта */
+#fontWeight {
+    font-weight: bold; /* Делаем жирный */
+}
+
+/* Пример использования в HTML */
+&lt;style&gt;
+    .my-text {
+        font-family: 'Arial', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: normal;
+    }
+&lt;/style&gt;
+
+&lt;p class="my-text"&gt;Этот текст использует CSS свойства шрифта&lt;/p&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="content-card animate-on-scroll">
+                    <h3>Атрибут class и селекторы</h3>
+                    <p>Атрибут <code>class</code> используется для указания одного или нескольких имен классов для
+                        элемента.</p>
+
+                    <div class="demo-box">
+                        <h4>Примеры классов:</h4>
+                        <div class="class-examples">
+                            <div class="box large-box red-box">Красный блок</div>
+                            <div class="box large-box blue-box">Синий блок</div>
+                            <div class="box large-box green-box">Зеленый блок</div>
+                            <div class="box large-box yellow-box">Желтый блок</div>
+                        </div>
+
+                        <div class="selector-table-wrapper">
+                            <table class="selector-table">
+                                <tr>
+                                    <th>Селектор</th>
+                                    <th>Пример</th>
+                                    <th>Описание</th>
+                                </tr>
+                                <tr>
+                                    <td><code>.class</code></td>
+                                    <td><code>.intro</code></td>
+                                    <td>Элементы с class="intro"</td>
+                                </tr>
+                                <tr>
+                                    <td><code>#id</code></td>
+                                    <td><code>#firstname</code></td>
+                                    <td>Элемент с id="firstname"</td>
+                                </tr>
+                                <tr>
+                                    <td><code>element</code></td>
+                                    <td><code>p</code></td>
+                                    <td>Все &lt;p&gt; элементы</td>
+                                </tr>
+                                <tr>
+                                    <td><code>element.class</code></td>
+                                    <td><code>p.intro</code></td>
+                                    <td>&lt;p&gt; элементы с class="intro"</td>
+                                </tr>
+                                <tr>
+                                    <td><code>*</code></td>
+                                    <td><code>*</code></td>
+                                    <td>Все элементы</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card animate-on-scroll">
+                <h3>Цветовые системы CSS</h3>
+                <p>CSS поддерживает несколько систем обозначения цветов.</p>
+
+                <div class="demo-box">
+                    <div class="color-examples">
+                        <div class="color-box" style="background-color: #ff0000;">
+                            <span>HEX: #ff0000</span>
+                        </div>
+                        <div class="color-box" style="background-color: rgb(255, 0, 0);">
+                            <span>RGB: rgb(255, 0, 0)</span>
+                        </div>
+                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.5);">
+                            <span>RGBA: rgba(255, 0, 0, 0.5)</span>
+                        </div>
+                        <div class="color-box" style="background-color: red;">
+                            <span>Именованный: red</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Верстка и позиционирование -->
+        <section id="layout" class="section">
+            <h2 class="section-title"><i class="fas fa-th"></i> Верстка и позиционирование</h2>
+
+            <div class="content-card animate-on-scroll">
+                <h3>CSS Box Model</h3>
+                <p>Каждый элемент в веб-дизайне - прямоугольный блок. Box Model описывает как эти блоки размеряются.</p>
+
+                <div class="box-model-demo">
+                    <div class="box-model-label margin">Margin</div>
+                    <div class="box-model-outer">
+                        <div class="box-model-label border">Border</div>
+                        <div class="box-model-inner">
+                            <div class="box-model-label padding">Padding</div>
+                            <div class="box-model-content">
+                                <div class="box-model-label content">Content</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-controls">
+                    <button id="increasePaddingBtn" class="demo-btn">Увеличить Padding</button>
+                    <button id="decreasePaddingBtn" class="demo-btn">Уменьшить Padding</button>
+                    <button id="increaseMarginBtn" class="demo-btn">Увеличить Margin</button>
+                    <button id="decreaseMarginBtn" class="demo-btn">Уменьшить Margin</button>
+                    <button class="show-code-btn demo-btn" data-target="boxmodel-code">Показать код</button>
+                </div>
+
+                <div id="boxmodel-code" class="code-example hidden">
+                    <pre><code class="css">/* Пример CSS Box Model */
+
+/* Основные свойства Box Model */
+.box-element {
+    /* Content */
+    width: 300px;
+    height: 200px;
+    
+    /* Padding - внутренний отступ */
+    padding: 20px; /* Все стороны */
+    padding: 20px 30px; /* Вертикально и горизонтально */
+    padding: 10px 20px 30px 40px; /* Верх, право, низ, лево */
+    
+    /* Border - граница */
+    border: 3px solid #333; /* Толщина, стиль, цвет */
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+    
+    /* Margin - внешний отступ */
+    margin: 15px; /* Все стороны */
+    margin: 10px auto; /* Центрирование по горизонтали */
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+/* Пример HTML */
+&lt;div class="box-element"&gt;
+    Содержимое элемента
+&lt;/div&gt;
+
+/* Рассчет полного размера элемента:
+   Общая ширина = width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+   Общая высота = height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom
+*/</code></pre>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="content-card animate-on-scroll">
+                    <h3>Ширина, высота и фон</h3>
+                    <p>Контроль размеров элементов и свойств фона для визуального дизайна.</p>
+
+                    <div class="dimension-demo">
+                        <div class="dimension-box" id="sizeBox">
+                            <p>Ширина: <span id="widthValue">300</span>px</p>
+                            <p>Высота: <span id="heightValue">200</span>px</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-controls">
+                        <button id="increaseSizeBtn" class="demo-btn">Увеличить</button>
+                        <button id="decreaseSizeBtn" class="demo-btn">Уменьшить</button>
+                        <button id="changeBackgroundBtn" class="demo-btn">Фон</button>
+                        <button class="show-code-btn demo-btn" data-target="dimension-code">Показать код</button>
+                    </div>
+
+                    <div id="dimension-code" class="code-example hidden">
+                        <pre><code class="css">/* Примеры свойств ширины, высоты и фона */
+
+/* 1. Ширина и высота */
+#sizeBox {
+    width: 300px; /* Фиксированная ширина */
+    height: 200px; /* Фиксированная высота */
+    max-width: 100%; /* Максимальная ширина */
+    min-height: 100px; /* Минимальная высота */
+}
+
+/* 2. Фоновые свойства */
+#sizeBox {
+    /* Сплошной цвет фона */
+    background-color: #4361ee;
+    
+    /* Градиентный фон */
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    
+    /* Изображение фона */
+    background-image: url('фон.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Заполнение всего элемента */
+    background-position: center; /* Центрирование */
+}
+
+/* Пример HTML */
+&lt;div id="sizeBox"&gt;
+    Этот блок имеет настраиваемые размеры и фон
+&lt;/div&gt;
+
+/* JavaScript для изменения размеров */
+document.getElementById('increaseSizeBtn').addEventListener('click', function() {
+    const box = document.getElementById('sizeBox');
+    const currentWidth = parseInt(box.style.width) || 300;
+    box.style.width = (currentWidth + 30) + 'px';
+});</code></pre>
+                    </div>
+                </div>
+
+                <div class="content-card animate-on-scroll">
+                    <h3>Свойства границ</h3>
+                    <p>Границы создают визуальное разделение и могут быть стилизованы разными способами.</p>
+
+                    <div class="border-demo">
+                        <div class="border-example solid">Solid</div>
+                        <div class="border-example dashed">Dashed</div>
+                        <div class="border-example dotted">Dotted</div>
+                        <div class="border-example double">Double</div>
+                    </div>
+
+                    <div class="demo-controls">
+                        <button id="increaseBorderBtn" class="demo-btn">Толще</button>
+                        <button id="decreaseBorderBtn" class="demo-btn">Тоньше</button>
+                        <button id="changeBorderColorBtn" class="demo-btn">Цвет</button>
+                        <button class="show-code-btn demo-btn" data-target="border-code">Показать код</button>
+                    </div>
+
+                    <div id="border-code" class="code-example hidden">
+                        <pre><code class="css">/* Примеры свойств границ */
+
+/* 1. Основные свойства границ */
+.border-example {
+    /* Короткая запись */
+    border: 3px solid #4361ee; /* Толщина, стиль, цвет */
+    
+    /* Детальная настройка */
+    border-width: 3px; /* Толщина */
+    border-style: solid; /* Стиль */
+    border-color: #4361ee; /* Цвет */
+    
+    /* Отдельные стороны */
+    border-top: 2px dashed red;
+    border-right: 3px dotted blue;
+    border-bottom: 4px double green;
+    border-left: 1px solid purple;
+}
+
+/* 2. Стили границ */
+.solid { border-style: solid; }   /* Сплошная линия */
+.dashed { border-style: dashed; } /* Пунктирная линия */
+.dotted { border-style: dotted; } /* Точечная линия */
+.double { border-style: double; } /* Двойная линия */
+.groove { border-style: groove; } /* 3D желоб */
+.ridge { border-style: ridge; }   /* 3D гребень */
+.inset { border-style: inset; }   /* 3D вдавленная */
+.outset { border-style: outset; } /* 3D выпуклая */
+
+/* 3. Скругление углов */
+.rounded {
+    border-radius: 10px; /* Все углы */
+    border-radius: 10px 20px 30px 40px; /* Левый-верхний, правый-верхний, правый-нижний, левый-нижний */
+}
+
+/* Пример HTML */
+&lt;div class="border-example solid"&gt;Элемент с границей&lt;/div&gt;
+
+/* JavaScript для изменения границ */
+document.getElementById('increaseBorderBtn').addEventListener('click', function() {
+    const examples = document.querySelectorAll('.border-example');
+    examples.forEach(box => {
+        const currentWidth = parseInt(box.style.borderWidth) || 3;
+        box.style.borderWidth = (currentWidth + 1) + 'px';
+    });
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Позиционирование элементов -->
+            <div class="content-card animate-on-scroll">
+                <h3>Позиционирование элементов</h3>
+                <p>CSS свойство <code>position</code> определяет метод позиционирования элемента.</p>
+
+                <div class="positioning-grid">
+                    <!-- Static -->
+                    <div class="positioning-example">
+                        <h4><code>position: static</code></h4>
+                        <div class="position-demo-container static-demo">
+                            <div class="position-item static-item">Static</div>
+                            <div class="position-item static-item">Static</div>
+                            <div class="position-item static-item">Static</div>
+                        </div>
+                        <p>Элементы располагаются в обычном потоке документа.</p>
+                    </div>
+
+                    <!-- Relative -->
+                    <div class="positioning-example">
+                        <h4><code>position: relative</code></h4>
+                        <div class="position-demo-container relative-demo">
+                            <div class="position-item relative-item">Relative</div>
+                            <div class="position-item">Обычный</div>
+                            <div class="position-item">Обычный</div>
+                        </div>
+                        <p>Позиционируется относительно своего нормального положения.</p>
+                    </div>
+
+                    <!-- Absolute -->
+                    <div class="positioning-example">
+                        <h4><code>position: absolute</code></h4>
+                        <div class="position-demo-container absolute-demo">
+                            <div class="position-item absolute-item">Absolute</div>
+                        </div>
+                        <p>Позиционируется относительно ближайшего позиционированного предка.</p>
+                    </div>
+
+                    <!-- Fixed -->
+                    <div class="positioning-example">
+                        <h4><code>position: fixed</code></h4>
+                        <div class="position-demo-container fixed-demo">
+                            <div class="position-item fixed-item">Fixed</div>
+                        </div>
+                        <p>Позиционируется относительно окна браузера.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code class="css">/* Static - значение по умолчанию */
+.static {
+    position: static;
+}
+
+/* Relative - смещается относительно своего нормального положения */
+.relative {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/* Absolute - позиционируется относительно предка */
+.absolute {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+/* Fixed - фиксируется относительно окна браузера */
+.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Мультимедиа -->
+        <section id="multimedia" class="section">
+            <h2 class="section-title"><i class="fas fa-photo-video"></i> Мультимедиа на веб-страницах</h2>
+
+            <div class="content-row">
+                <div class="content-card animate-on-scroll">
+                    <h3>Изображения с тегом &lt;img&gt;</h3>
+                    <p>Тег <code>&lt;img&gt;</code> используется для вставки изображений в HTML страницы.</p>
+
+                    <div class="image-demo">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Пример HTML кода" class="responsive-image" id="demoImage">
+                        <div class="demo-controls">
+                            <button id="changeImageBtn" class="demo-btn">Сменить изображение</button>
+                            <button id="toggleBorderBtn" class="demo-btn">Граница</button>
+                            <button class="show-code-btn demo-btn" data-target="image-code">Показать код</button>
+                        </div>
+                    </div>
+
+                    <div id="image-code" class="code-example hidden">
+                        <pre><code class="html">&lt;!-- Базовое использование --&gt;
+&lt;img src="image.jpg" alt="Описание изображения"&gt;
+
+&lt;!-- С указанием размеров --&gt;
+&lt;img src="image.jpg" alt="Описание" width="400" height="300"&gt;
+
+&lt;!-- Responsive изображение --&gt;
+&lt;img src="image.jpg" alt="Описание" class="responsive-image"&gt;
+
+&lt;!-- С границей --&gt;
+&lt;img src="image.jpg" alt="Описание" style="border: 3px solid blue; border-radius: 10px;"&gt;
+
+&lt;!-- JavaScript для смены изображения --&gt;
+&lt;script&gt;
+    const images = [
+        'image1.jpg',
+        'image2.jpg',
+        'image3.jpg'
+    ];
+    let currentIndex = 0;
+    
+    function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('demoImage').src = images[currentIndex];
+    }
+&lt;/script&gt;
+
+&lt;!-- CSS для responsive изображения --&gt;
+&lt;style&gt;
+    .responsive-image {
+        max-width: 100%;
+        height: auto;
+    }
+&lt;/style&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="content-card animate-on-scroll">
+                    <h3>Аудио с тегом &lt;audio&gt;</h3>
+                    <p>Тег <code>&lt;audio&gt;</code> используется для вставки звукового контента с встроенными
+                        контролами.</p>
+
+                    <div class="audio-demo">
+                        <audio id="audioPlayer" controls preload="metadata">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                                type="audio/mpeg">
+                            Ваш браузер не поддерживает аудио элемент.
+                        </audio>
+
+                        <div class="demo-controls">
+                            <button id="playAudioBtn" class="demo-btn"><i class="fas fa-play"></i>
+                                Воспроизвести</button>
+                            <button id="pauseAudioBtn" class="demo-btn"><i class="fas fa-pause"></i> Пауза</button>
+                            <button id="restartAudioBtn" class="demo-btn"><i class="fas fa-redo"></i> Заново</button>
+                            <button class="show-code-btn demo-btn" data-target="audio-code">Показать код</button>
+                        </div>
+                    </div>
+
+                    <div id="audio-code" class="code-example hidden">
+                        <pre><code class="html">&lt;!-- Базовое использование --&gt;
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Ваш браузер не поддерживает аудио.
+&lt;/audio&gt;
+
+&lt;!-- С несколькими источниками --&gt;
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Ваш браузер не поддерживает аудио.
+&lt;/audio&gt;
+
+&lt;!-- Автовоспроизведение --&gt;
+&lt;audio controls autoplay&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;!-- Зацикливание --&gt;
+&lt;audio controls loop&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;!-- JavaScript для управления аудио --&gt;
+&lt;script&gt;
+    const audioPlayer = document.getElementById('audioPlayer');
+    
+    // Функция для воспроизведения
+    function playAudio() {
+        audioPlayer.play();
+    }
+    
+    // Функция для паузы
+    function pauseAudio() {
+        audioPlayer.pause();
+    }
+    
+    // Функция для перезапуска
+    function restartAudio() {
+        audioPlayer.currentTime = 0;
+        audioPlayer.play();
+    }
+&lt;/script&gt;
+
+&lt;!-- CSS для стилизации аудиоплеера --&gt;
+&lt;style&gt;
+    /* Стилизация элемента audio */
+    audio {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    /* Стилизация кнопок управления */
+    .audio-controls {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+&lt;/style&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Продвинутый CSS -->
+        <section id="advanced-css" class="section">
+            <h2 class="section-title"><i class="fas fa-star"></i> Продвинутые возможности CSS</h2>
+
+            <div class="content-card animate-on-scroll">
+                <h3>CSS переходы и анимации</h3>
+                <p>CSS переходы и анимации позволяют создавать плавные визуальные эффекты.</p>
+
+                <div class="animation-demo">
+                    <div class="animation-box" id="animatedBox"></div>
+                    <div class="demo-controls">
+                        <button id="startAnimationBtn" class="demo-btn">Старт</button>
+                        <button id="pauseAnimationBtn" class="demo-btn">Пауза</button>
+                        <button id="resetAnimationBtn" class="demo-btn">Сброс</button>
+                    </div>
+                </div>
+
+                <div class="transition-examples">
+                    <h4>Примеры переходов:</h4>
+                    <div class="transition-examples-grid">
+                        <div class="transition-example color">Цвет</div>
+                        <div class="transition-example scale">Масштаб</div>
+                        <div class="transition-example rotate">Вращение</div>
+                        <div class="transition-example opacity">Прозрачность</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="content-card animate-on-scroll">
+                    <h3>Flexbox верстка</h3>
+                    <p>Flexbox - одномерный метод верстки для расположения элементов в рядах или колонках.</p>
+
+                    <div class="flexbox-demo">
+                        <div class="flexbox-info">
+                            <div class="current-property">
+                                <span id="currentDirection">Направление: row</span>
+                                <span id="currentJustify">Выравнивание: flex-start</span>
+                                <span id="currentWrap">Перенос: nowrap</span>
+                            </div>
+                        </div>
+                        <div class="flex-container" id="flexDemoContainer">
+                            <div class="flex-item">1</div>
+                            <div class="flex-item">2</div>
+                            <div class="flex-item">3</div>
+                            <div class="flex-item">4</div>
+                            <div class="flex-item">5</div>
+                            <div class="flex-item">6</div>
+                        </div>
+                        <div class="demo-controls">
+                            <button id="flexDirectionBtn" class="demo-btn">Направление (row/column)</button>
+                            <button id="justifyContentBtn" class="demo-btn">Выравнивание (space-around)</button>
+                            <button id="flexWrapBtn" class="demo-btn">Перенос (wrap)</button>
+                            <button class="show-code-btn demo-btn" data-target="flexbox-code">Показать код</button>
+                        </div>
+                    </div>
+
+                    <div id="flexbox-code" class="code-example hidden">
+                        <pre><code class="css">/* Основные свойства Flexbox */
+
+/* 1. Создание flex-контейнера */
+.flex-container {
+    display: flex; /* Активация Flexbox */
+}
+
+/* 2. Направление элементов (flex-direction) */
+.flex-container {
+    flex-direction: row; /* По умолчанию - в строку */
+    flex-direction: row-reverse; /* В строку в обратном порядке */
+    flex-direction: column; /* В колонку */
+    flex-direction: column-reverse; /* В колонку в обратном порядке */
+}
+
+/* 3. Выравнивание по главной оси (justify-content) */
+.flex-container {
+    justify-content: flex-start; /* По умолчанию - в начале */
+    justify-content: flex-end; /* В конце */
+    justify-content: center; /* По центру */
+    justify-content: space-between; /* Равномерно с отступами между */
+    justify-content: space-around; /* Равномерно с отступами вокруг */
+    justify-content: space-evenly; /* Равномерно с равными отступами */
+}
+
+/* 4. Перенос элементов (flex-wrap) */
+.flex-container {
+    flex-wrap: nowrap; /* По умолчанию - без переноса */
+    flex-wrap: wrap; /* С переносом на новую строку */
+    flex-wrap: wrap-reverse; /* С переносом в обратном порядке */
+}
+
+/* 5. Выравнивание по поперечной оси (align-items) */
+.flex-container {
+    align-items: stretch; /* По умолчанию - растягивание */
+    align-items: flex-start; /* В начале */
+    align-items: flex-end; /* В конце */
+    align-items: center; /* По центру */
+    align-items: baseline; /* По базовой линии */
+}
+
+/* Пример HTML */
+&lt;div class="flex-container"&gt;
+    &lt;div class="flex-item"&gt;Элемент 1&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Элемент 2&lt;/div&gt;
+    &lt;div class="flex-item"&gt;Элемент 3&lt;/div&gt;
+&lt;/div&gt;
+
+/* JavaScript для изменения flex-свойств */
+document.getElementById('flexDirectionBtn').addEventListener('click', function() {
+    const container = document.getElementById('flexDemoContainer');
+    const currentDirection = container.style.flexDirection || 'row';
+    container.style.flexDirection = currentDirection === 'row' ? 'column' : 'row';
+});</code></pre>
+                    </div>
+                </div>
+
+                <div class="content-card animate-on-scroll">
+                    <h3>CSS Grid верстка</h3>
+                    <p>CSS Grid - двумерная система верстки для создания сложных макетов.</p>
+
+                    <div class="grid-demo">
+                        <div class="grid-container">
+                            <div class="grid-item header">Header</div>
+                            <div class="grid-item main">Main Content</div>
+                            <div class="grid-item footer">Footer</div>
+                        </div>
+                        <div class="demo-controls">
+                            <button id="gridTemplateBtn" class="demo-btn">Шаблон (Простой вертикальный)</button>
+                            <button id="gridGapBtn" class="demo-btn">Промежутки</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card animate-on-scroll">
+                <h3>Современные возможности CSS</h3>
+                <p>CSS продолжает развиваться с новыми возможностями для более мощной стилизации.</p>
+
+                <div class="modern-css-demo">
+                    <div class="modern-features-grid">
+                        <div class="modern-feature variable">CSS Переменные</div>
+                        <div class="modern-feature filter">CSS Фильтры</div>
+                        <div class="modern-feature shape">CSS Формы</div>
+                        <div class="modern-feature blend">Режимы наложения</div>
+                    </div>
+
+                    <div class="demo-controls">
+                        <button id="toggleVariablesBtn" class="demo-btn">Переменные</button>
+                        <button id="changeFilterBtn" class="demo-btn">Фильтры</button>
+                        <button id="toggleShapeBtn" class="demo-btn">Формы</button>
+                        <button id="changeBlendBtn" class="demo-btn">Наложение</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Визуальный дизайн -->
+        <section id="design" class="section">
+            <h2 class="section-title"><i class="fas fa-palette"></i> Визуальный веб-дизайн</h2>
+
+            <div class="content-card animate-on-scroll">
+                <h3>Современные принципы дизайна</h3>
+                <p>Современный веб-дизайн фокусируется на пользовательском опыте, доступности и визуальной
+                    привлекательности. Вот ключевые принципы, которые следует учитывать при создании современных
+                    веб-сайтов.</p>
+
+                <div class="design-principles-grid">
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Адаптивный дизайн</h4>
+                        <p>Обеспечивает корректную работу на всех устройствах, от мобильных до десктопных.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Используйте медиа-запросы и относительные единицы (%, rem, vw).
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-bolt"></i></div>
+                        <h4>Производительность</h4>
+                        <p>Быстрая загрузка и плавные взаимодействия улучшают пользовательский опыт.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Оптимизируйте изображения и минифицируйте CSS/JS.
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-eye"></i></div>
+                        <h4>Доступность</h4>
+                        <p>Дизайн для всех пользователей, включая людей с ограниченными возможностями.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Используйте семантические теги и aria-атрибуты.
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h4>Визуальная иерархия</h4>
+                        <p>Использование размера, цвета и контраста для направления внимания пользователя.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Создайте четкую типографическую шкалу.
+                        </div>
+                    </div>
+                    <!-- Новые принципы для заполнения пустого пространства -->
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h4>Визуальный баланс</h4>
+                        <p>Равномерное распределение визуального веса создает гармоничную композицию.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Используйте правило третей и симметрию.
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-users"></i></div>
+                        <h4>UX/UI Дизайн</h4>
+                        <p>Сочетание удобства использования (UX) и визуального интерфейса (UI).</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Протестируйте дизайн с реальными пользователями.
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-palette"></i></div>
+                        <h4>Цветовая гармония</h4>
+                        <p>Согласованное использование цвета для создания настроения и акцентов.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Используйте ограниченную цветовую палитру (3-5 цветов).
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-hand-pointer"></i></div>
+                        <h4>Интерактивность</h4>
+                        <p>Элементы, реагирующие на действия пользователя, улучшают вовлеченность.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Добавляйте микро-анимации для обратной связи.
+                        </div>
+                    </div>
+                    <!-- Дополнительная карточка -->
+                    <div class="principle">
+                        <div class="principle-icon"><i class="fas fa-eye-dropper"></i></div>
+                        <h4>Консистентность</h4>
+                        <p>Единый стиль элементов интерфейса создает предсказуемость и узнаваемость.</p>
+                        <div class="principle-tip">
+                            <strong>Совет:</strong> Создайте гайдлайн по стилю и придерживайтесь его.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Практические примеры принципов -->
+                <div class="design-examples">
+                    <h4>Практическое применение принципов дизайна:</h4>
+                    <div class="example-demos">
+                        <div class="example-demo">
+                            <div class="example-visual" id="colorHarmonyDemo">
+                                <div class="color-swatch primary"></div>
+                                <div class="color-swatch secondary"></div>
+                                <div class="color-swatch accent"></div>
+                                <div class="color-swatch neutral"></div>
+                            </div>
+                            <div class="example-info">
+                                <h5>Цветовая гармония</h5>
+                                <p>Сбалансированная палитра создает визуальное единство.</p>
+                                <button class="demo-btn change-palette-btn">Сменить палитру</button>
+                            </div>
+                        </div>
+                        <div class="example-demo">
+                            <div class="example-visual" id="typographyDemo">
+                                <div class="typography-sample">
+                                    <h5 style="font-size: 24px; margin: 0 0 8px 0;">Заголовок</h5>
+                                    <p style="font-size: 16px; margin: 0 0 8px 0;">Основной текст для чтения</p>
+                                    <p style="font-size: 14px; color: var(--text-muted); margin: 0;">Мелкий текст и
+                                        подписи</p>
+                                </div>
+                            </div>
+                            <div class="example-info">
+                                <h5>Типографическая шкала</h5>
+                                <p>Иерархия шрифтов направляет внимание пользователя.</p>
+                                <button class="demo-btn change-typography-btn">Изменить шрифты</button>
+                            </div>
+                        </div>
+                        <div class="example-demo">
+                            <div class="example-visual spacing-visual-container" id="spacingDemo">
+                                <div class="spacing-example">
+                                    <div class="spacing-box">Элемент 1</div>
+                                    <div class="spacing-box">Элемент 2</div>
+                                    <div class="spacing-box">Элемент 3</div>
+                                </div>
+                            </div>
+                            <div class="example-info">
+                                <h5>Пространство и отступы</h5>
+                                <p>Правильные отступы улучшают читаемость и структуру.</p>
+                                <button class="demo-btn adjust-spacing-btn">Настроить отступы</button>
+                                <!-- <div class="spacing-info">
+                                    <small>Текущие отступы: <span id="currentSpacing">Стандартные</span></small>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="call-to-action">
+                <h3>Готовы создавать удивительные веб-сайты?</h3>
+                <p>Теперь у вас есть полное понимание HTML5 и CSS3. Практикуйте эти концепции, экспериментируйте с кодом
+                    и продолжайте учиться! Помните, что хороший дизайн - это баланс между эстетикой и функциональностью.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#home" class="cta-button">Наверх <i class="fas fa-arrow-up"></i></a>
+                    <button class="cta-button secondary" id="designQuizBtn">Проверить знания <i
+                            class="fas fa-question-circle"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Современный учебник HTML5 & CSS3</h3>
+                    <p>Полное руководство по современной веб-разработке с интерактивными примерами.</p>
+                    <div class="developer-footer">
+                        <p><strong>Разработчик:</strong> Илья Калабук Александрович, 11A</p>
+                        <p><strong>Год выпуска:</strong> 2026</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#html-structure">HTML структура</a></li>
+                        <li><a href="#css-basics">Основы CSS</a></li>
+                        <li><a href="#layout">Верстка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ресурсы</h4>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank">MDN HTML</a></li>
+                        <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS" target="_blank">MDN CSS</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2026 Современный веб-учебник. Создано с <i class="fas fa-heart"></i> для обучения.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Кнопка скролла наверх -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
