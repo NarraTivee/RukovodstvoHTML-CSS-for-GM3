@@ -1,22 +1,16 @@
-// Основной JavaScript файл для учебника HTML5 & CSS3
-
-// DOM элементы
 const sidebar = document.getElementById('sidebar');
 const sidebarToggle = document.getElementById('sidebarToggle');
 const sidebarClose = document.getElementById('sidebarClose');
 const scrollToTopBtn = document.getElementById('scrollToTop');
 const progressBar = document.getElementById('progressBar');
 
-// Элементы для отображения текущих свойств Flexbox
 const currentDirection = document.getElementById('currentDirection');
 const currentJustify = document.getElementById('currentJustify');
 const currentWrap = document.getElementById('currentWrap');
 
-// Инициализация сайта
 function initWebsite() {
     console.log("Инициализация сайта...");
 
-    // Переключение боковой панели
     if (sidebarToggle) {
         sidebarToggle.addEventListener('click', () => {
             sidebar.classList.add('active');
@@ -29,7 +23,6 @@ function initWebsite() {
         });
     }
 
-    // Закрыть боковую панель при клике на ссылку (мобильные)
     document.querySelectorAll('.sidebar-nav a').forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth < 768) {
@@ -38,10 +31,8 @@ function initWebsite() {
         });
     });
 
-    // Обновление активной ссылки при скролле
     window.addEventListener('scroll', handleScroll);
 
-    // Кнопка "наверх"
     if (scrollToTopBtn) {
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({
@@ -51,10 +42,8 @@ function initWebsite() {
         });
     }
 
-    // Инициализация Intersection Observer для анимаций
     initIntersectionObserver();
 
-    // Инициализация всех демонстраций
     initBoxModelDemo();
     initDimensionDemo();
     initFontDemo();
@@ -67,18 +56,14 @@ function initWebsite() {
     initModernCSSDemo();
     initImageDemo();
     initTransitionDemos();
-    initDesignPrinciplesDemo(); // Добавлена новая функция
+    initDesignPrinciplesDemo();
 
-    // Инициализация кнопок показа кода
     initCodeExamples();
 
-    // Обновление прогресс-бара при загрузке
     window.dispatchEvent(new Event('scroll'));
 }
 
-// Обработка скролла
 function handleScroll() {
-    // Обновление активной ссылки в навигации
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.sidebar-nav a');
 
@@ -100,7 +85,6 @@ function handleScroll() {
         }
     });
 
-    // Показать/скрыть кнопку "наверх"
     if (scrollToTopBtn) {
         if (window.scrollY > 300) {
             scrollToTopBtn.classList.add('visible');
@@ -109,7 +93,6 @@ function handleScroll() {
         }
     }
 
-    // Обновление прогресс-бара
     if (progressBar) {
         const winHeight = window.innerHeight;
         const docHeight = document.documentElement.scrollHeight;
@@ -120,7 +103,6 @@ function handleScroll() {
     }
 }
 
-// Intersection Observer для анимаций
 function initIntersectionObserver() {
     const observerOptions = {
         root: null,
@@ -141,7 +123,6 @@ function initIntersectionObserver() {
     });
 }
 
-// Демонстрация Box Model
 function initBoxModelDemo() {
     console.log("Инициализация Box Model демо...");
     const increasePaddingBtn = document.getElementById('increasePaddingBtn');
@@ -192,7 +173,6 @@ function initBoxModelDemo() {
     }
 }
 
-// Демонстрация размеров
 function initDimensionDemo() {
     console.log("Инициализация демо размеров...");
     const sizeBox = document.getElementById('sizeBox');
@@ -253,7 +233,6 @@ function initDimensionDemo() {
     updateSizeBox();
 }
 
-// Демонстрация шрифтов
 function initFontDemo() {
     console.log("Инициализация демо шрифтов...");
     const fontFamilyElement = document.getElementById('fontFamily');
@@ -315,7 +294,6 @@ function initFontDemo() {
     if (toggleFontWeightBtn) toggleFontWeightBtn.addEventListener('click', toggleFontWeight);
 }
 
-// Демонстрация аудио
 function initAudioDemo() {
     console.log("Инициализация аудио демо...");
     const audioPlayer = document.getElementById('audioPlayer');
@@ -349,7 +327,6 @@ function initAudioDemo() {
     }
 }
 
-// Демонстрация анимаций
 function initAnimationDemo() {
     const animatedBox = document.getElementById('animatedBox');
     const startAnimationBtn = document.getElementById('startAnimationBtn');
@@ -375,7 +352,7 @@ function initAnimationDemo() {
     function resetAnimation() {
         if (animatedBox) {
             animatedBox.style.animation = 'none';
-            void animatedBox.offsetWidth; // Триггер перерисовки
+            void animatedBox.offsetWidth;
             animatedBox.style.animation = 'bounce 2s infinite alternate';
         }
     }
@@ -385,7 +362,6 @@ function initAnimationDemo() {
     if (resetAnimationBtn) resetAnimationBtn.addEventListener('click', resetAnimation);
 }
 
-// Смена цвета
 function initColorChangeDemo() {
     console.log("Инициализация демо смены цвета...");
     const colorChangeBtn = document.getElementById('colorChangeBtn');
@@ -393,14 +369,12 @@ function initColorChangeDemo() {
     const uniqueSpan = document.getElementById('unique-span');
     const firstSpan = document.querySelector('.highlight');
 
-    // 1. Кнопка "Переключить выделение" - исправлена
     if (toggleHighlightBtn && firstSpan) {
         toggleHighlightBtn.addEventListener('click', function (e) {
             e.preventDefault();
             console.log("Кнопка 'Переключить выделение' нажата");
             firstSpan.classList.toggle('highlight');
 
-            // Если класс highlight удален, добавляем его обратно через секунду
             if (!firstSpan.classList.contains('highlight')) {
                 setTimeout(() => {
                     firstSpan.classList.add('highlight');
@@ -420,7 +394,6 @@ function initColorChangeDemo() {
     }
 }
 
-// Демонстрация границ
 function initBorderDemo() {
     console.log("Инициализация демо границ...");
     const increaseBorderBtn = document.getElementById('increaseBorderBtn');
@@ -463,7 +436,6 @@ function initBorderDemo() {
     updateBorders();
 }
 
-// Flexbox демонстрация
 function initFlexboxDemo() {
     console.log("Инициализация Flexbox демо...");
     const flexDirectionBtn = document.getElementById('flexDirectionBtn');
@@ -484,13 +456,12 @@ function initFlexboxDemo() {
     const wraps = ['nowrap', 'wrap', 'wrap-reverse'];
     const wrapNames = ['nowrap', 'wrap', 'wrap-reverse'];
 
-    // Функция для обновления отображения текущих свойств
     function updateCurrentProperties() {
         if (currentDirection) {
             currentDirection.textContent = `Направление: ${directionNames[directionIndex]}`;
         }
         if (currentJustify) {
-            currentJustify.textContent = `Выравнивание: ${justifyNames[justifyIndex]}`;
+            currentJustify.textContent = `Выр��внивание: ${justifyNames[justifyIndex]}`;
         }
         if (currentWrap) {
             currentWrap.textContent = `Перенос: ${wrapNames[wrapIndex]}`;
@@ -510,7 +481,6 @@ function initFlexboxDemo() {
             justifyIndex = (justifyIndex + 1) % justifies.length;
             flexContainer.style.justifyContent = justifies[justifyIndex];
 
-            // Наглядно показываем изменение выравнивания
             if (justifies[justifyIndex] === 'space-around') {
                 flexContainer.style.gap = '20px';
             } else if (justifies[justifyIndex] === 'space-between') {
@@ -528,7 +498,6 @@ function initFlexboxDemo() {
             wrapIndex = (wrapIndex + 1) % wraps.length;
             flexContainer.style.flexWrap = wraps[wrapIndex];
 
-            // Наглядно показываем перенос
             if (wraps[wrapIndex] === 'wrap') {
                 flexContainer.style.alignContent = 'flex-start';
                 flexContainer.style.maxHeight = '200px';
@@ -547,11 +516,9 @@ function initFlexboxDemo() {
         });
     }
 
-    // Инициализация начальных значений
     updateCurrentProperties();
 }
 
-// Grid демонстрация
 function initGridDemo() {
     console.log("Инициализация Grid демо...");
     const gridTemplateBtn = document.getElementById('gridTemplateBtn');
@@ -562,42 +529,36 @@ function initGridDemo() {
     let hasGap = true;
 
     const templates = [
-        // Шаблон 1: Простой вертикальный
         {
             areas: '"header" "main" "footer"',
             columns: '1fr',
             rows: 'auto 1fr auto',
             name: 'Простой вертикальный'
         },
-        // Шаблон 2: Двухколоночный
         {
             areas: '"header header" "main main" "footer footer"',
             columns: '1fr 1fr',
             rows: 'auto 1fr auto',
             name: 'Двухколоночный'
         },
-        // Шаблон 3: Трехколоночный
         {
             areas: '"header header header" "main main main" "footer footer footer"',
             columns: '1fr 1fr 1fr',
             rows: 'auto 1fr auto',
             name: 'Трехколоночный'
         },
-        // Шаблон 4: Многострочный
         {
             areas: '"header header" "main main" "main main" "footer footer"',
             columns: '1fr 1fr',
             rows: 'auto 1fr 1fr auto',
             name: 'Многострочный'
         },
-        // Шаблон 5: Асимметричный
         {
             areas: '"header header header" "main main ." "footer footer footer"',
             columns: '2fr 1fr 1fr',
             rows: 'auto 1fr auto',
             name: 'Асимметричный'
         },
-        // Шаблон 6: Центрированный
         {
             areas: '". header ." ". main ." ". footer ."',
             columns: '1fr 2fr 1fr',
@@ -611,16 +572,13 @@ function initGridDemo() {
             templateIndex = (templateIndex + 1) % templates.length;
             const template = templates[templateIndex];
 
-            // Обновляем grid-шаблон
             gridContainer.style.gridTemplateAreas = template.areas;
             gridContainer.style.gridTemplateColumns = template.columns;
             gridContainer.style.gridTemplateRows = template.rows;
 
-            // Обновляем текст кнопки
             gridTemplateBtn.textContent = `Шаблон (${template.name})`;
         });
 
-        // Инициализируем первый шаблон
         gridTemplateBtn.textContent = `Шаблон (${templates[0].name})`;
     }
 
@@ -633,7 +591,6 @@ function initGridDemo() {
     }
 }
 
-// Современный CSS демонстрация
 function initModernCSSDemo() {
     console.log("Инициализация современного CSS демо...");
     const toggleVariablesBtn = document.getElementById('toggleVariablesBtn');
@@ -708,7 +665,6 @@ function initModernCSSDemo() {
             blendIndex = (blendIndex + 1) % blends.length;
             blendFeature.style.backgroundBlendMode = blends[blendIndex];
 
-            // Наглядно показываем наложение
             if (blends[blendIndex] === 'multiply') {
                 blendFeature.style.background = 'linear-gradient(45deg, var(--warning-color), var(--primary-color))';
             } else if (blends[blendIndex] === 'screen') {
@@ -722,7 +678,6 @@ function initModernCSSDemo() {
     }
 }
 
-// Демонстрация изображений
 function initImageDemo() {
     console.log("Инициализация демо изображений...");
     const changeImageBtn = document.getElementById('changeImageBtn');
@@ -754,7 +709,6 @@ function initImageDemo() {
     }
 }
 
-// Демонстрации переходов
 function initTransitionDemos() {
     const transitionExamples = document.querySelectorAll('.transition-example');
 
@@ -773,11 +727,9 @@ function initTransitionDemos() {
     });
 }
 
-// Функции для демонстрации принципов дизайна
 function initDesignPrinciplesDemo() {
     console.log("Инициализация демо принципов дизайна...");
 
-    // Цветовые палитры
     const colorPalettes = [
         { primary: '#4361ee', secondary: '#3a0ca3', accent: '#f72585', neutral: '#6c757d' },
         { primary: '#2a9d8f', secondary: '#1d7873', accent: '#e76f51', neutral: '#264653' },
@@ -786,7 +738,6 @@ function initDesignPrinciplesDemo() {
         { primary: '#4cc9f0', secondary: '#4361ee', accent: '#7209b7', neutral: '#1a1a2e' }
     ];
 
-    // Шрифтовые пары
     const fontPairs = [
         { heading: "'Poppins', sans-serif", body: "'Poppins', sans-serif" },
         { heading: "'Roboto Mono', monospace", body: "'Roboto', sans-serif" },
@@ -794,7 +745,6 @@ function initDesignPrinciplesDemo() {
         { heading: "'Courier New', monospace", body: "'Verdana', sans-serif" }
     ];
 
-    // Элементы
     const changePaletteBtn = document.querySelector('.change-palette-btn');
     const changeTypographyBtn = document.querySelector('.change-typography-btn');
     const adjustSpacingBtn = document.querySelector('.adjust-spacing-btn');
@@ -804,13 +754,11 @@ function initDesignPrinciplesDemo() {
     let fontIndex = 0;
     let spacingLevel = 1;
 
-    // Смена цветовой палитры
     if (changePaletteBtn) {
         changePaletteBtn.addEventListener('click', function () {
             paletteIndex = (paletteIndex + 1) % colorPalettes.length;
             const palette = colorPalettes[paletteIndex];
 
-            // Обновляем цветовые образцы
             const colorSwatches = document.querySelectorAll('.color-swatch');
             if (colorSwatches.length >= 4) {
                 colorSwatches[0].style.backgroundColor = palette.primary;
@@ -819,7 +767,6 @@ function initDesignPrinciplesDemo() {
                 colorSwatches[3].style.backgroundColor = palette.neutral;
             }
 
-            // Наглядно меняем цвета для демонстрации
             const demoElement = document.getElementById('colorHarmonyDemo');
             if (demoElement) {
                 demoElement.style.borderColor = palette.accent;
@@ -827,13 +774,11 @@ function initDesignPrinciplesDemo() {
         });
     }
 
-    // Смена типографии
     if (changeTypographyBtn) {
         changeTypographyBtn.addEventListener('click', function () {
             fontIndex = (fontIndex + 1) % fontPairs.length;
             const fonts = fontPairs[fontIndex];
 
-            // Обновляем пример типографии
             const typographyDemo = document.getElementById('typographyDemo');
             if (typographyDemo) {
                 const heading = typographyDemo.querySelector('h5');
@@ -842,7 +787,6 @@ function initDesignPrinciplesDemo() {
                 if (heading) heading.style.fontFamily = fonts.heading;
                 body.forEach(p => p.style.fontFamily = fonts.body);
 
-                // Показываем название шрифта
                 const fontName = fonts.heading.replace(/'/g, '');
                 this.textContent = `Шрифт: ${fontName}`;
 
@@ -853,20 +797,17 @@ function initDesignPrinciplesDemo() {
         });
     }
 
-    // Настройка отступов
     if (adjustSpacingBtn) {
         adjustSpacingBtn.addEventListener('click', function () {
             spacingLevel = (spacingLevel + 1) % 4;
             const spacingValues = [10, 20, 30, 40];
 
-            // Обновляем отступы в демо
             const spacingBoxes = document.querySelectorAll('.spacing-box');
             spacingBoxes.forEach(box => {
                 box.style.margin = `0 ${spacingValues[spacingLevel]}px`;
                 box.style.padding = `${spacingValues[spacingLevel] / 2}px`;
             });
 
-            // Обновляем текст кнопки
             const spacingTexts = ['Маленькие', 'Стандартные', 'Большие', 'Очень большие'];
             this.textContent = `Отступы: ${spacingTexts[spacingLevel]}`;
 
@@ -876,10 +817,8 @@ function initDesignPrinciplesDemo() {
         });
     }
 
-    // Кнопка проверки знаний
     if (designQuizBtn) {
         designQuizBtn.addEventListener('click', function () {
-            // Простой тест по принципам дизайна
             const questions = [
                 "Что такое адаптивный дизайн?",
                 "Почему важна доступность веб-сайтов?",
@@ -891,10 +830,8 @@ function initDesignPrinciplesDemo() {
 
             const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
 
-            // Показываем вопрос во всплывающем окне
             alert(`Вопрос по дизайну:\n\n${randomQuestion}\n\nПодумайте над ответом и проверьте свои знания в разделе!`);
 
-            // Изменяем текст кнопки на время
             const originalText = this.innerHTML;
             this.innerHTML = '<i class="fas fa-check"></i> Вопрос показан!';
             this.style.background = 'linear-gradient(45deg, #2a9d8f, #1d7873)';
@@ -907,11 +844,9 @@ function initDesignPrinciplesDemo() {
     }
 }
 
-// Инициализация кнопок для показа примеров кода
 function initCodeExamples() {
     console.log("Инициализация кнопок показа кода...");
 
-    // Простая функция для переключения видимости кода
     function toggleCodeVisibility(button, codeElementId) {
         console.log(`Переключение видимости для ${codeElementId}`);
         const codeElement = document.getElementById(codeElementId);
@@ -929,11 +864,10 @@ function initCodeExamples() {
         } else {
             codeElement.classList.remove('hidden');
             codeElement.classList.add('visible');
-            if (button) button.textContent = 'Скрыть пример кода';
+            if (button) button.textContent = 'Скрыть пример к��да';
         }
     }
 
-    // Функция для привязки кнопки к элементу кода
     function bindCodeButton(buttonSelector, codeElementId) {
         const button = document.querySelector(buttonSelector);
         if (button) {
@@ -948,40 +882,19 @@ function initCodeExamples() {
         return false;
     }
 
-    // 1. Заголовки и параграфы
     bindCodeButton('[data-target="headings-code"]', 'headings-code');
-
-    // 2. Выравнивание текста
     bindCodeButton('[data-target="text-align-code"]', 'text-align-code');
-
-    // 3. Тег span и атрибут id
     bindCodeButton('[data-target="span-code"]', 'span-code');
-
-    // 4. Свойства шрифтов
     bindCodeButton('[data-target="font-code"]', 'font-code');
-
-    // 5. CSS Box Model
     bindCodeButton('[data-target="boxmodel-code"]', 'boxmodel-code');
-
-    // 6. Ширина, высота и фон
     bindCodeButton('[data-target="dimension-code"]', 'dimension-code');
-
-    // 7. Свойства границ
     bindCodeButton('[data-target="border-code"]', 'border-code');
-
-    // 8. Изображения
     bindCodeButton('[data-target="image-code"]', 'image-code');
-
-    // 9. Аудио
     bindCodeButton('[data-target="audio-code"]', 'audio-code');
-
-    // 10. Flexbox верстка
     bindCodeButton('[data-target="flexbox-code"]', 'flexbox-code');
 
-    // 11. CSS Grid верстка - создаем динамически
     const gridDemoControls = document.querySelector('.grid-demo .demo-controls');
     if (gridDemoControls) {
-        // Проверяем, не существует ли уже кнопка
         let gridCodeButton = document.querySelector('[data-target="grid-code"]');
 
         if (!gridCodeButton) {
@@ -991,30 +904,23 @@ function initCodeExamples() {
             gridCodeButton.setAttribute('data-target', 'grid-code');
             gridDemoControls.appendChild(gridCodeButton);
 
-            // Создаем элемент с кодом для Grid, если его нет
             if (!document.getElementById('grid-code')) {
                 const gridCodeElement = document.createElement('div');
                 gridCodeElement.id = 'grid-code';
                 gridCodeElement.className = 'code-example hidden';
                 gridCodeElement.innerHTML = `
-                    <pre><code class="css">/* Основные свойства CSS Grid */
-
-/* 1. Создание grid-контейнера */
+                    <pre><code class="css">
 .grid-container {
-    display: grid; /* Активация Grid */
+    display: grid;
 }
 
-/* 2. Определение колонок и строк */
 .grid-container {
-    grid-template-columns: 1fr 1fr 1fr; /* Три колонки равной ширины */
-    grid-template-rows: auto 1fr auto; /* Три строки */
-    
-    /* Альтернативная запись */
-    grid-template-columns: repeat(3, 1fr); /* Три колонки по 1fr */
-    grid-template-rows: 100px 200px 100px; /* Фиксированные высоты */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 200px 100px;
 }
 
-/* 3. Создание областей (grid-template-areas) */
 .grid-container {
     grid-template-areas:
         "header header header"
@@ -1022,7 +928,6 @@ function initCodeExamples() {
         "footer footer footer";
 }
 
-/* 4. Расположение элементов в областях */
 .header {
     grid-area: header;
 }
@@ -1036,21 +941,18 @@ function initCodeExamples() {
     grid-area: footer;
 }
 
-/* 5. Промежутки между элементами (gap) */
 .grid-container {
-    gap: 20px; /* Промежутки между всеми элементами */
-    row-gap: 10px; /* Промежутки между строками */
-    column-gap: 15px; /* Промежутки между колонками */
+    gap: 20px;
+    row-gap: 10px;
+    column-gap: 15px;
 }
 
-/* 6. Выравнивание элементов */
 .grid-container {
-    justify-items: center; /* Выравнивание по горизонтали */
-    align-items: center; /* Выравнивание по вертикали */
-    place-items: center; /* Оба выравнивания */
+    justify-items: center;
+    align-items: center;
+    place-items: center;
 }
 
-/* Пример HTML для Grid */
 &lt;div class="grid-container"&gt;
     &lt;div class="header"&gt;Шапка&lt;/div&gt;
     &lt;div class="main"&gt;Основной контент&lt;/div&gt;
@@ -1058,7 +960,6 @@ function initCodeExamples() {
 &lt;/div&gt;</code></pre>
                 `;
 
-                // Добавляем элемент с кодом после демо-контейнера
                 const gridDemo = document.querySelector('.grid-demo');
                 if (gridDemo) {
                     gridDemo.appendChild(gridCodeElement);
@@ -1066,7 +967,6 @@ function initCodeExamples() {
             }
         }
 
-        // Привязываем обработчик
         gridCodeButton.addEventListener('click', function (e) {
             e.preventDefault();
             toggleCodeVisibility(this, 'grid-code');
@@ -1077,5 +977,4 @@ function initCodeExamples() {
     console.log("Все кнопки показа кода инициализированы");
 }
 
-// Инициализация сайта при загрузке DOM
 document.addEventListener('DOMContentLoaded', initWebsite);
