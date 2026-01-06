@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- Боковая панель навигации -->
     <nav id="sidebar" class="sidebar">
         <div class="sidebar-header">
             <h2><i class="fas fa-code"></i> HTML5 & CSS3</h2>
@@ -39,9 +38,7 @@
         </div>
     </nav>
 
-    <!-- Основной контент -->
     <main id="mainContent" class="main-content">
-        <!-- Мобильный заголовок -->
         <header class="mobile-header">
             <span class="header-text">Современный учебник веб-разработки</span>
             <button id="sidebarToggle" class="sidebar-toggle">
@@ -49,7 +46,6 @@
             </button>
         </header>
 
-        <!-- Герой-секция -->
         <section id="home" class="section hero-section">
             <div class="hero-content animate-on-scroll">
                 <h1 class="hero-title">Освойте современные <span class="html-text">HTML5</span> и <span
@@ -68,14 +64,12 @@
                     <div class="code-line"><span class="tag">&lt;/html&gt;</span></div>
                 </div>
             </div>
-            <!-- Информация разработчика в правом нижнем углу героя -->
             <div class="hero-developer-info">
                 <p><strong>Разработчик:</strong> Калабук Илья Александрович, 11A</p>
                 <p><strong>Год выпуска:</strong> 2026</p>
             </div>
         </section>
 
-        <!-- Структура HTML -->
         <section id="html-structure" class="section">
             <h2 class="section-title"><i class="fab fa-html5"></i> Структура HTML документа</h2>
 
@@ -92,9 +86,7 @@
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;Заголовок страницы&lt;/title&gt;
-    &lt;!-- Внешний CSS --&gt;
     &lt;link rel="stylesheet" href="styles.css"&gt;
-    &lt;!-- Внутренний CSS --&gt;
     &lt;style&gt;
         body { font-family: Arial, sans-serif; }
     &lt;/style&gt;
@@ -154,7 +146,6 @@
             </div>
         </section>
 
-        <!-- Форматирование текста -->
         <section id="text-formatting" class="section">
             <h2 class="section-title"><i class="fas fa-text-height"></i> Форматирование текста и ссылки</h2>
 
@@ -186,8 +177,7 @@
                     <div class="example-container">
                         <button class="show-code-btn demo-btn" data-target="headings-code">Показать пример кода</button>
                         <div id="headings-code" class="code-example hidden">
-                            <pre><code class="html">&lt;!-- Пример использования заголовков h1-h6 --&gt;
-&lt;h1&gt;Главный заголовок страницы&lt;/h1&gt;
+                            <pre><code class="html">&lt;h1&gt;Главный заголовок страницы&lt;/h1&gt;
 &lt;p&gt;Это основной контент страницы.&lt;/p&gt;
 
 &lt;h2&gt;Заголовок первой секции&lt;/h2&gt;
@@ -203,7 +193,7 @@
 &lt;h5&gt;Мелкий заголовок&lt;/h5&gt;
 &lt;h6&gt;Самый маленький заголовок&lt;/h6&gt;
 
-&lt;hr&gt; &lt;!-- Горизонтальная линия --&gt;
+&lt;hr&gt;
 &lt;p&gt;Текст после разделительной линии.&lt;/p&gt;</code></pre>
                         </div>
                     </div>
@@ -240,8 +230,7 @@
                         <button class="show-code-btn demo-btn" data-target="text-align-code">Показать пример
                             кода</button>
                         <div id="text-align-code" class="code-example hidden">
-                            <pre><code class="html">&lt;!-- Пример выравнивания текста с помощью CSS --&gt;
-&lt;style&gt;
+                            <pre><code class="html">&lt;style&gt;
     .text-left {
         text-align: left;
     }
@@ -253,16 +242,13 @@
     }
 &lt;/style&gt;
 
-&lt;!-- Примеры в HTML --&gt;
 &lt;p class="text-left"&gt;Текст по левому краю&lt;/p&gt;
 &lt;p class="text-center"&gt;Текст по центру&lt;/p&gt;
 &lt;p class="text-right"&gt;Текст по правому краю&lt;/p&gt;
 
-&lt;!-- Семантические элементы --&gt;
 &lt;p&gt;&lt;b&gt;Просто жирный текст&lt;/b&gt; и &lt;strong&gt;важный текст&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;i&gt;Просто курсив&lt;/i&gt; и &lt;em&gt;акцентированный текст&lt;/em&gt;&lt;/p&gt;
 
-&lt;!-- Примеры ссылок --&gt;
 &lt;a href="index.html"&gt;Обычная ссылка&lt;/a&gt;
 &lt;a href="https://example.com" target="_blank"&gt;Ссылка в новом окне&lt;/a&gt;
 &lt;a href="mailto:email@example.com"&gt;Ссылка для отправки email&lt;/a&gt;</code></pre>
@@ -298,34 +284,26 @@
                 </div>
 
                 <div id="span-code" class="code-example hidden">
-                    <pre><code class="html">&lt;!-- Пример использования тега span --&gt;
-&lt;p&gt;Это параграф с &lt;span class="highlight"&gt;выделенным текстом&lt;/span&gt; внутри.&lt;/p&gt;
+                    <pre><code class="html">&lt;p&gt;Это параграф с &lt;span class="highlight"&gt;выделенным текстом&lt;/span&gt; внутри.&lt;/p&gt;
 
-&lt;!-- Пример использования атрибута id --&gt;
 &lt;p&gt;Это параграф с &lt;span id="unique-span"&gt;уникальным элементом&lt;/span&gt;.&lt;/p&gt;
 
-&lt;!-- CSS для стилизации --&gt;
 &lt;style&gt;
-    /* Стили для класса highlight */
     .highlight {
         background-color: yellow;
         font-weight: bold;
         padding: 2px 5px;
     }
     
-    /* Стили для элемента с id */
     #unique-span {
         color: blue;
         text-decoration: underline;
     }
 &lt;/style&gt;
 
-&lt;!-- JavaScript для взаимодействия --&gt;
 &lt;script&gt;
-    // Получить элемент по id
     const uniqueSpan = document.getElementById('unique-span');
     
-    // Изменить стиль элемента
     function changeSpanColor() {
         uniqueSpan.style.color = 'red';
     }
@@ -334,7 +312,6 @@
             </div>
         </section>
 
-        <!-- Основы CSS -->
         <section id="css-basics" class="section">
             <h2 class="section-title"><i class="fab fa-css3-alt"></i> Основы и стилизация CSS</h2>
 
@@ -391,29 +368,22 @@
                     </div>
 
                     <div id="font-code" class="code-example hidden">
-                        <pre><code class="css">/* Примеры CSS свойств для шрифтов */
-
-/* 1. Изменение шрифта */
-#fontFamily {
-    font-family: 'Georgia', serif; /* Изменяем шрифт */
+                        <pre><code class="css">#fontFamily {
+    font-family: 'Georgia', serif;
 }
 
-/* 2. Изменение размера шрифта */
 #fontSize {
-    font-size: 32px; /* Увеличиваем размер */
+    font-size: 32px;
 }
 
-/* 3. Изменение стиля шрифта */
 #fontStyle {
-    font-style: italic; /* Делаем курсив */
+    font-style: italic;
 }
 
-/* 4. Изменение толщины шрифта */
 #fontWeight {
-    font-weight: bold; /* Делаем жирный */
+    font-weight: bold;
 }
 
-/* Пример использования в HTML */
 &lt;style&gt;
     .my-text {
         font-family: 'Arial', sans-serif;
@@ -502,7 +472,6 @@
             </div>
         </section>
 
-        <!-- Верстка и позиционирование -->
         <section id="layout" class="section">
             <h2 class="section-title"><i class="fas fa-th"></i> Верстка и позиционирование</h2>
 
@@ -532,40 +501,32 @@
                 </div>
 
                 <div id="boxmodel-code" class="code-example hidden">
-                    <pre><code class="css">/* Пример CSS Box Model */
-
-/* Основные свойства Box Model */
-.box-element {
-    /* Content */
+                    <pre><code class="css">.box-element {
     width: 300px;
     height: 200px;
     
-    /* Padding - внутренний отступ */
-    padding: 20px; /* Все стороны */
-    padding: 20px 30px; /* Вертикально и горизонтально */
-    padding: 10px 20px 30px 40px; /* Верх, право, низ, лево */
+    padding: 20px;
+    padding: 20px 30px;
+    padding: 10px 20px 30px 40px;
     
-    /* Border - граница */
-    border: 3px solid #333; /* Толщина, стиль, цвет */
+    border: 3px solid #333;
     border-width: 2px;
     border-style: solid;
     border-color: blue;
     
-    /* Margin - внешний отступ */
-    margin: 15px; /* Все стороны */
-    margin: 10px auto; /* Центрирование по горизонтали */
+    margin: 15px;
+    margin: 10px auto;
     margin-top: 20px;
     margin-right: 30px;
     margin-bottom: 20px;
     margin-left: 30px;
 }
 
-/* Пример HTML */
 &lt;div class="box-element"&gt;
     Содержимое элемента
 &lt;/div&gt;
 
-/* Рассчет полного размера элемента:
+/*
    Общая ширина = width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
    Общая высота = height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom
 */</code></pre>
@@ -592,37 +553,28 @@
                     </div>
 
                     <div id="dimension-code" class="code-example hidden">
-                        <pre><code class="css">/* Примеры свойств ширины, высоты и фона */
-
-/* 1. Ширина и высота */
-#sizeBox {
-    width: 300px; /* Фиксированная ширина */
-    height: 200px; /* Фиксированная высота */
-    max-width: 100%; /* Максимальная ширина */
-    min-height: 100px; /* Минимальная высота */
+                        <pre><code class="css">#sizeBox {
+    width: 300px;
+    height: 200px;
+    max-width: 100%;
+    min-height: 100px;
 }
 
-/* 2. Фоновые свойства */
 #sizeBox {
-    /* Сплошной цвет фона */
     background-color: #4361ee;
     
-    /* Градиентный фон */
     background: linear-gradient(135deg, #4361ee, #3a0ca3);
     
-    /* Изображение фона */
     background-image: url('фон.jpg');
     background-repeat: no-repeat;
-    background-size: cover; /* Заполнение всего элемента */
-    background-position: center; /* Центрирование */
+    background-size: cover;
+    background-position: center;
 }
 
-/* Пример HTML */
 &lt;div id="sizeBox"&gt;
     Этот блок имеет настраиваемые размеры и фон
 &lt;/div&gt;
 
-/* JavaScript для изменения размеров */
 document.getElementById('increaseSizeBtn').addEventListener('click', function() {
     const box = document.getElementById('sizeBox');
     const currentWidth = parseInt(box.style.width) || 300;
@@ -650,45 +602,35 @@ document.getElementById('increaseSizeBtn').addEventListener('click', function() 
                     </div>
 
                     <div id="border-code" class="code-example hidden">
-                        <pre><code class="css">/* Примеры свойств границ */
-
-/* 1. Основные свойства границ */
-.border-example {
-    /* Короткая запись */
-    border: 3px solid #4361ee; /* Толщина, стиль, цвет */
+                        <pre><code class="css">.border-example {
+    border: 3px solid #4361ee;
     
-    /* Детальная настройка */
-    border-width: 3px; /* Толщина */
-    border-style: solid; /* Стиль */
-    border-color: #4361ee; /* Цвет */
+    border-width: 3px;
+    border-style: solid;
+    border-color: #4361ee;
     
-    /* Отдельные стороны */
     border-top: 2px dashed red;
     border-right: 3px dotted blue;
     border-bottom: 4px double green;
     border-left: 1px solid purple;
 }
 
-/* 2. Стили границ */
-.solid { border-style: solid; }   /* Сплошная линия */
-.dashed { border-style: dashed; } /* Пунктирная линия */
-.dotted { border-style: dotted; } /* Точечная линия */
-.double { border-style: double; } /* Двойная линия */
-.groove { border-style: groove; } /* 3D желоб */
-.ridge { border-style: ridge; }   /* 3D гребень */
-.inset { border-style: inset; }   /* 3D вдавленная */
-.outset { border-style: outset; } /* 3D выпуклая */
+.solid { border-style: solid; }
+.dashed { border-style: dashed; }
+.dotted { border-style: dotted; }
+.double { border-style: double; }
+.groove { border-style: groove; }
+.ridge { border-style: ridge; }
+.inset { border-style: inset; }
+.outset { border-style: outset; }
 
-/* 3. Скругление углов */
 .rounded {
-    border-radius: 10px; /* Все углы */
-    border-radius: 10px 20px 30px 40px; /* Левый-верхний, правый-верхний, правый-нижний, левый-нижний */
+    border-radius: 10px;
+    border-radius: 10px 20px 30px 40px;
 }
 
-/* Пример HTML */
 &lt;div class="border-example solid"&gt;Элемент с границей&lt;/div&gt;
 
-/* JavaScript для изменения границ */
 document.getElementById('increaseBorderBtn').addEventListener('click', function() {
     const examples = document.querySelectorAll('.border-example');
     examples.forEach(box => {
@@ -700,13 +642,11 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                 </div>
             </div>
 
-            <!-- Позиционирование элементов -->
             <div class="content-card animate-on-scroll">
                 <h3>Позиционирование элементов</h3>
                 <p>CSS свойство <code>position</code> определяет метод позиционирования элемента.</p>
 
                 <div class="positioning-grid">
-                    <!-- Static -->
                     <div class="positioning-example">
                         <h4><code>position: static</code></h4>
                         <div class="position-demo-container static-demo">
@@ -717,7 +657,6 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                         <p>Элементы располагаются в обычном потоке документа.</p>
                     </div>
 
-                    <!-- Relative -->
                     <div class="positioning-example">
                         <h4><code>position: relative</code></h4>
                         <div class="position-demo-container relative-demo">
@@ -728,7 +667,6 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                         <p>Позиционируется относительно своего нормального положения.</p>
                     </div>
 
-                    <!-- Absolute -->
                     <div class="positioning-example">
                         <h4><code>position: absolute</code></h4>
                         <div class="position-demo-container absolute-demo">
@@ -737,7 +675,6 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                         <p>Позиционируется относительно ближайшего позиционированного предка.</p>
                     </div>
 
-                    <!-- Fixed -->
                     <div class="positioning-example">
                         <h4><code>position: fixed</code></h4>
                         <div class="position-demo-container fixed-demo">
@@ -748,26 +685,22 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                 </div>
 
                 <div class="code-example">
-                    <pre><code class="css">/* Static - значение по умолчанию */
-.static {
+                    <pre><code class="css">.static {
     position: static;
 }
 
-/* Relative - смещается относительно своего нормального положения */
 .relative {
     position: relative;
     top: 20px;
     left: 30px;
 }
 
-/* Absolute - позиционируется относительно предка */
 .absolute {
     position: absolute;
     top: 50px;
     right: 50px;
 }
 
-/* Fixed - фиксируется относительно окна браузера */
 .fixed {
     position: fixed;
     bottom: 20px;
@@ -778,7 +711,6 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
             </div>
         </section>
 
-        <!-- Мультимедиа -->
         <section id="multimedia" class="section">
             <h2 class="section-title"><i class="fas fa-photo-video"></i> Мультимедиа на веб-страницах</h2>
 
@@ -798,19 +730,14 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                     </div>
 
                     <div id="image-code" class="code-example hidden">
-                        <pre><code class="html">&lt;!-- Базовое использование --&gt;
-&lt;img src="image.jpg" alt="Описание изображения"&gt;
+                        <pre><code class="html">&lt;img src="image.jpg" alt="Описание изображения"&gt;
 
-&lt;!-- С указанием размеров --&gt;
 &lt;img src="image.jpg" alt="Описание" width="400" height="300"&gt;
 
-&lt;!-- Responsive изображение --&gt;
 &lt;img src="image.jpg" alt="Описание" class="responsive-image"&gt;
 
-&lt;!-- С границей --&gt;
 &lt;img src="image.jpg" alt="Описание" style="border: 3px solid blue; border-radius: 10px;"&gt;
 
-&lt;!-- JavaScript для смены изображения --&gt;
 &lt;script&gt;
     const images = [
         'image1.jpg',
@@ -825,7 +752,6 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
     }
 &lt;/script&gt;
 
-&lt;!-- CSS для responsive изображения --&gt;
 &lt;style&gt;
     .responsive-image {
         max-width: 100%;
@@ -857,59 +783,48 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                     </div>
 
                     <div id="audio-code" class="code-example hidden">
-                        <pre><code class="html">&lt;!-- Базовое использование --&gt;
-&lt;audio controls&gt;
+                        <pre><code class="html">&lt;audio controls&gt;
     &lt;source src="audio.mp3" type="audio/mpeg"&gt;
     Ваш браузер не поддерживает аудио.
 &lt;/audio&gt;
 
-&lt;!-- С несколькими источниками --&gt;
 &lt;audio controls&gt;
     &lt;source src="audio.mp3" type="audio/mpeg"&gt;
     &lt;source src="audio.ogg" type="audio/ogg"&gt;
     Ваш браузер не поддерживает аудио.
 &lt;/audio&gt;
 
-&lt;!-- Автовоспроизведение --&gt;
 &lt;audio controls autoplay&gt;
     &lt;source src="audio.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
 
-&lt;!-- Зацикливание --&gt;
 &lt;audio controls loop&gt;
     &lt;source src="audio.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
 
-&lt;!-- JavaScript для управления аудио --&gt;
 &lt;script&gt;
     const audioPlayer = document.getElementById('audioPlayer');
     
-    // Функция для воспроизведения
     function playAudio() {
         audioPlayer.play();
     }
     
-    // Функция для паузы
     function pauseAudio() {
         audioPlayer.pause();
     }
     
-    // Функция для перезапуска
     function restartAudio() {
         audioPlayer.currentTime = 0;
         audioPlayer.play();
     }
 &lt;/script&gt;
 
-&lt;!-- CSS для стилизации аудиоплеера --&gt;
 &lt;style&gt;
-    /* Стилизация элемента audio */
     audio {
         width: 100%;
         margin: 10px 0;
     }
     
-    /* Стилизация кнопок управления */
     .audio-controls {
         display: flex;
         gap: 10px;
@@ -921,7 +836,6 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
             </div>
         </section>
 
-        <!-- Продвинутый CSS -->
         <section id="advanced-css" class="section">
             <h2 class="section-title"><i class="fas fa-star"></i> Продвинутые возможности CSS</h2>
 
@@ -979,55 +893,46 @@ document.getElementById('increaseBorderBtn').addEventListener('click', function(
                     </div>
 
                     <div id="flexbox-code" class="code-example hidden">
-                        <pre><code class="css">/* Основные свойства Flexbox */
-
-/* 1. Создание flex-контейнера */
-.flex-container {
-    display: flex; /* Активация Flexbox */
+                        <pre><code class="css">.flex-container {
+    display: flex;
 }
 
-/* 2. Направление элементов (flex-direction) */
 .flex-container {
-    flex-direction: row; /* По умолчанию - в строку */
-    flex-direction: row-reverse; /* В строку в обратном порядке */
-    flex-direction: column; /* В колонку */
-    flex-direction: column-reverse; /* В колонку в обратном порядке */
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
-/* 3. Выравнивание по главной оси (justify-content) */
 .flex-container {
-    justify-content: flex-start; /* По умолчанию - в начале */
-    justify-content: flex-end; /* В конце */
-    justify-content: center; /* По центру */
-    justify-content: space-between; /* Равномерно с отступами между */
-    justify-content: space-around; /* Равномерно с отступами вокруг */
-    justify-content: space-evenly; /* Равномерно с равными отступами */
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
-/* 4. Перенос элементов (flex-wrap) */
 .flex-container {
-    flex-wrap: nowrap; /* По умолчанию - без переноса */
-    flex-wrap: wrap; /* С переносом на новую строку */
-    flex-wrap: wrap-reverse; /* С переносом в обратном порядке */
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 
-/* 5. Выравнивание по поперечной оси (align-items) */
 .flex-container {
-    align-items: stretch; /* По умолчанию - растягивание */
-    align-items: flex-start; /* В начале */
-    align-items: flex-end; /* В конце */
-    align-items: center; /* По центру */
-    align-items: baseline; /* По базовой линии */
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: baseline;
 }
 
-/* Пример HTML */
 &lt;div class="flex-container"&gt;
     &lt;div class="flex-item"&gt;Элемент 1&lt;/div&gt;
     &lt;div class="flex-item"&gt;Элемент 2&lt;/div&gt;
     &lt;div class="flex-item"&gt;Элемент 3&lt;/div&gt;
 &lt;/div&gt;
 
-/* JavaScript для изменения flex-свойств */
 document.getElementById('flexDirectionBtn').addEventListener('click', function() {
     const container = document.getElementById('flexDemoContainer');
     const currentDirection = container.style.flexDirection || 'row';
@@ -1076,7 +981,6 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
             </div>
         </section>
 
-        <!-- Визуальный дизайн -->
         <section id="design" class="section">
             <h2 class="section-title"><i class="fas fa-palette"></i> Визуальный веб-дизайн</h2>
 
@@ -1090,7 +994,7 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
                     <div class="principle">
                         <div class="principle-icon"><i class="fas fa-mobile-alt"></i></div>
                         <h4>Адаптивный дизайн</h4>
-                        <p>Обеспечивает корректную работу на всех устройствах, от мобильных до десктопных.</p>
+                        <p>Обеспечивает корректную работу на всех уст��ойствах, от мобильных до десктопных.</p>
                         <div class="principle-tip">
                             <strong>Совет:</strong> Используйте медиа-запросы и относительные единицы (%, rem, vw).
                         </div>
@@ -1106,7 +1010,7 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
                     <div class="principle">
                         <div class="principle-icon"><i class="fas fa-eye"></i></div>
                         <h4>Доступность</h4>
-                        <p>Дизайн для всех пользователей, включая людей с ограниченными возможностями.</p>
+                        <p>Дизайн для всех пользователей, включая людей с ограниченными возможностя��и.</p>
                         <div class="principle-tip">
                             <strong>Совет:</strong> Используйте семантические теги и aria-атрибуты.
                         </div>
@@ -1119,7 +1023,6 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
                             <strong>Совет:</strong> Создайте четкую типографическую шкалу.
                         </div>
                     </div>
-                    <!-- Новые принципы для заполнения пустого пространства -->
                     <div class="principle">
                         <div class="principle-icon"><i class="fas fa-balance-scale"></i></div>
                         <h4>Визуальный баланс</h4>
@@ -1152,7 +1055,6 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
                             <strong>Совет:</strong> Добавляйте микро-анимации для обратной связи.
                         </div>
                     </div>
-                    <!-- Дополнительная карточка -->
                     <div class="principle">
                         <div class="principle-icon"><i class="fas fa-eye-dropper"></i></div>
                         <h4>Консистентность</h4>
@@ -1163,7 +1065,6 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
                     </div>
                 </div>
 
-                <!-- Практические примеры принципов -->
                 <div class="design-examples">
                     <h4>Практическое применение принципов дизайна:</h4>
                     <div class="example-demos">
@@ -1224,15 +1125,13 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
             </div>
         </section>
 
-        <!-- Футер -->
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Современный учебник HTML5 & CSS3</h3>
                     <p>Полное руководство по современной веб-разработке с интерактивными примерами.</p>
-                    <!-- В секции футера -->
                     <div class="developer-footer">
-                        <p><strong>Разработчик:</strong> Калабук Илья Александрович, 11A</p>
+                        <p><strong>Разработчик:</strong> Калабук Илья Александро��ич, 11A</p>
                         <p><strong>Год выпуска:</strong> 2026</p>
                     </div>
                 </div>
@@ -1254,7 +1153,6 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
                         <li><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
                     </ul>
                 </div>
-                <!-- В секции футера, например после раздела "Ресурсы" -->
                 <div class="footer-section">
                     <h4>Контакты и соцсети</h4>
                     <div class="social-links">
@@ -1283,7 +1181,6 @@ document.getElementById('flexDirectionBtn').addEventListener('click', function()
         </footer>
     </main>
 
-    <!-- Кнопка скролла наверх -->
     <button id="scrollToTop" class="scroll-to-top">
         <i class="fas fa-chevron-up"></i>
     </button>
