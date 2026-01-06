@@ -1,4 +1,3 @@
-/* Основные переменные */
 :root {
     --primary-color: #4361ee;
     --secondary-color: #3a0ca3;
@@ -25,7 +24,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Сброс и базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +44,6 @@ body {
     min-height: 100vh;
 }
 
-/* Типография */
 h1,
 h2,
 h3,
@@ -113,7 +110,6 @@ pre {
     border: 1px solid var(--border-color);
 }
 
-/* Основной макет */
 .main-content {
     margin-left: var(--sidebar-width);
     min-height: 100vh;
@@ -172,7 +168,6 @@ pre {
     min-width: 300px;
 }
 
-/* Боковая панель */
 .sidebar {
     position: fixed;
     top: 0;
@@ -271,7 +266,6 @@ pre {
     transition: width 0.3s ease;
 }
 
-/* Мобильный заголовок */
 .mobile-header {
     position: fixed;
     top: 0;
@@ -283,7 +277,6 @@ pre {
     z-index: 999;
     display: none;
     justify-content: flex-start;
-    /* Изменено: начало слева */
     align-items: center;
     border-bottom: 1px solid var(--border-color);
     width: 100%;
@@ -292,12 +285,10 @@ pre {
     overflow: hidden;
 }
 
-/* Текст слева от бургера */
 .mobile-header .header-text {
     font-size: 0.9rem;
     margin: 0;
     margin-right: auto;
-    /* Текст прижимается к левому краю */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -308,7 +299,6 @@ pre {
     color: var(--light-color);
 }
 
-/* Бургер-меню теперь справа */
 .sidebar-toggle {
     background: var(--primary-color);
     color: white;
@@ -322,11 +312,8 @@ pre {
     align-items: center;
     transition: var(--transition);
     margin-left: auto;
-    /* Кнопка прижимается к правому краю */
     order: 2;
-    /* Порядок: 1-текст, 2-кнопка */
     flex-shrink: 0;
-    /* Не позволяет сжиматься */
 }
 
 .sidebar-toggle:hover {
@@ -334,7 +321,6 @@ pre {
     transform: scale(1.05);
 }
 
-/* Герой секция */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -394,7 +380,6 @@ pre {
     margin-top: 3rem;
     opacity: 0.8;
     margin-bottom: 60px;
-    /* ИСПРАВЛЕНО: больше расстояния от кода до информации разработчика */
 }
 
 .code-block {
@@ -421,7 +406,6 @@ pre {
     color: #569cd6;
 }
 
-/* Информация разработчика в герое (ИСПРАВЛЕНО - в правом нижнем углу с увеличенным отступом) */
 .hero-developer-info {
     position: absolute;
     bottom: 30px;
@@ -447,7 +431,6 @@ pre {
     color: var(--primary-color);
 }
 
-/* Общие стили кнопок */
 .demo-btn {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -481,7 +464,6 @@ pre {
     margin-top: 1.5rem;
 }
 
-/* Примеры и демонстрации */
 .example-container {
     margin: 1.5rem 0;
 }
@@ -568,7 +550,6 @@ pre {
     color: #ffc107;
 }
 
-/* Методы CSS */
 .css-methods {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -594,7 +575,6 @@ pre {
     margin-bottom: 0.5rem;
 }
 
-/* Демонстрация шрифтов */
 .font-demo {
     margin: 1.5rem 0;
 }
@@ -612,7 +592,6 @@ pre {
     background-color: rgba(67, 97, 238, 0.1);
 }
 
-/* Примеры классов */
 .class-examples {
     display: flex;
     flex-wrap: wrap;
@@ -656,7 +635,6 @@ pre {
     background: linear-gradient(45deg, #f8961e, #f3722c);
 }
 
-/* Таблица селекторов */
 .selector-table-wrapper {
     margin-top: 1.5rem;
     width: 100%;
@@ -697,7 +675,6 @@ pre {
     word-break: break-all;
 }
 
-/* Примеры цветов */
 .color-examples {
     display: flex;
     flex-wrap: wrap;
@@ -726,7 +703,6 @@ pre {
     transform: translateY(-5px);
 }
 
-/* Box Model Demo */
 .box-model-demo {
     position: relative;
     height: 400px;
@@ -813,7 +789,6 @@ pre {
     font-size: 1.1rem;
 }
 
-/* Dimension Demo */
 .dimension-demo {
     display: flex;
     justify-content: center;
@@ -837,7 +812,6 @@ pre {
     padding: 2rem;
 }
 
-/* Border Demo */
 .border-demo {
     display: flex;
     flex-wrap: wrap;
@@ -882,7 +856,6 @@ pre {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Позиционирование элементов */
 .positioning-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -923,7 +896,6 @@ pre {
     overflow: visible;
 }
 
-/* Для примеров с абсолютным и фиксированным позиционированием */
 .position-demo-container.absolute-demo,
 .position-demo-container.fixed-demo {
     height: 200px;
@@ -944,7 +916,6 @@ pre {
     margin: 5px;
 }
 
-/* Static демонстрация */
 .static-demo {
     display: flex;
     justify-content: center;
@@ -955,7 +926,6 @@ pre {
     background: linear-gradient(45deg, var(--gray-color), #495057);
 }
 
-/* Relative демонстрация */
 .relative-demo {
     display: flex;
     justify-content: center;
@@ -970,7 +940,6 @@ pre {
     z-index: 2;
 }
 
-/* Absolute демонстрация */
 .absolute-demo {
     position: relative;
     height: 180px;
@@ -988,7 +957,6 @@ pre {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Fixed демонстрация */
 .fixed-demo {
     position: relative;
     overflow: visible;
@@ -1007,7 +975,6 @@ pre {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Мультимедиа */
 .image-demo {
     margin-top: 1.5rem;
     text-align: center;
@@ -1022,7 +989,6 @@ pre {
     border: 2px solid var(--border-color);
 }
 
-/* Аудио демо */
 .audio-demo {
     margin-top: 1.5rem;
 }
@@ -1033,7 +999,6 @@ pre {
     border-radius: 8px;
 }
 
-/* Анимации */
 .animation-demo {
     margin-top: 1.5rem;
     text-align: center;
@@ -1059,7 +1024,6 @@ pre {
     }
 }
 
-/* Примеры переходов */
 .transition-examples {
     margin-top: 2rem;
 }
@@ -1109,7 +1073,6 @@ pre {
     opacity: 0.8;
 }
 
-/* Flexbox Demo (ИСПРАВЛЕНО - убраны лишние элементы) */
 .flexbox-demo {
     margin-top: 1.5rem;
 }
@@ -1153,7 +1116,6 @@ pre {
     flex-wrap: nowrap;
     align-items: stretch;
     overflow-x: auto;
-    /* ИСПРАВЛЕНО: горизонтальный скролл */
     overflow-y: hidden;
     max-width: 100%;
 }
@@ -1185,23 +1147,18 @@ pre {
     justify-content: center;
     align-items: center;
     min-width: 60px;
-    /* ИСПРАВЛЕНО: уменьшена минимальная ширина */
     min-height: 60px;
-    /* ИСПРАВЛЕНО: уменьшена минимальная высота */
     text-align: center;
     font-weight: 600;
     font-size: 1rem;
-    /* ИСПРАВЛЕНО: уменьшен шрифт */
     transition: var(--transition);
     flex: 0 0 auto;
-    /* ИСПРАВЛЕНО: элементы не растягиваются */
 }
 
 .flex-item:hover {
     transform: scale(1.05);
 }
 
-/* Grid Demo (ИСПРАВЛЕНО - без sidebar) */
 .grid-demo {
     margin-top: 1.5rem;
 }
@@ -1255,9 +1212,6 @@ pre {
     background: linear-gradient(45deg, var(--warning-color), #f94144);
 }
 
-/* УДАЛЕНЫ стили для .sidebar и .aside */
-
-/* Современный CSS Demo */
 .modern-css-demo {
     margin-top: 1.5rem;
 }
@@ -1307,7 +1261,6 @@ pre {
     background-blend-mode: normal;
 }
 
-/* Принципы дизайна */
 .design-principles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1336,7 +1289,6 @@ pre {
     margin-bottom: 1rem;
 }
 
-/* Call to Action */
 .call-to-action {
     text-align: center;
     padding: 3rem;
@@ -1357,7 +1309,6 @@ pre {
     color: var(--text-muted);
 }
 
-/* Футер */
 .footer {
     background-color: var(--dark-color);
     color: white;
@@ -1396,7 +1347,6 @@ pre {
     color: var(--primary-color);
 }
 
-/* Информация разработчика в футере */
 .developer-footer {
     margin-top: 1.5rem;
     padding-top: 1rem;
@@ -1427,7 +1377,6 @@ pre {
     margin: 0 0.25rem;
 }
 
-/* Увеличение иконок соцсетей в 2 раза */
 .social-links {
     display: flex;
     gap: 15px;
@@ -1439,15 +1388,12 @@ pre {
     align-items: center;
     justify-content: center;
     width: 60px;
-    /* Увеличен размер в 2 раза */
     height: 60px;
-    /* Увеличен размер в 2 раза */
     border-radius: 50%;
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
     transition: var(--transition);
     font-size: 28px;
-    /* Увеличен размер иконок */
 }
 
 .social-link:hover {
@@ -1471,7 +1417,6 @@ pre {
     background-color: #0077b5;
 }
 
-/* Информация разработчика в одну строку */
 .developer-footer {
     display: flex;
     flex-wrap: wrap;
@@ -1493,7 +1438,6 @@ pre {
     color: var(--primary-color);
 }
 
-/* Адаптивность для мобильных */
 @media (max-width: 768px) {
     .social-link {
         width: 50px;
@@ -1513,7 +1457,6 @@ pre {
     }
 }
 
-/* Альтернативный вариант с анимацией */
 .social-links.alternative {
     justify-content: center;
 }
@@ -1550,7 +1493,6 @@ pre {
     transform: scale(1.2);
 }
 
-/* Иконки с градиентом при наведении */
 .social-link.gradient {
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
@@ -1571,7 +1513,6 @@ pre {
     background: linear-gradient(45deg, #0077b5, #00a0dc);
 }
 
-/* Кнопка скролла наверх */
 .scroll-to-top {
     position: fixed;
     bottom: 2rem;
@@ -1602,7 +1543,6 @@ pre {
     transform: translateY(-3px) scale(1.1);
 }
 
-/* Анимация при скролле */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -1614,7 +1554,6 @@ pre {
     transform: translateY(0);
 }
 
-/* Адаптивный дизайн */
 @media (max-width: 768px) {
 
     html,
@@ -1802,7 +1741,6 @@ pre {
     }
 }
 
-/* Исправление переполнения текста */
 pre,
 code,
 .code-example {
@@ -1812,26 +1750,20 @@ code,
     white-space: pre-wrap;
 }
 
-/* Исправление для таблиц */
 table {
     width: 100%;
 }
 
-/* Улучшение отступов */
 .explanation-item,
 .method-card,
 .principle {
     margin-bottom: 0;
 }
 
-/* Исправление контейнера Box Model */
 .box-model-demo {
     overflow: visible;
 }
 
-/* Добавьте этот CSS в конец вашего файла main.css */
-
-/* Стили для скрытия/показа кода */
 .hidden {
     display: none !important;
 }
@@ -1859,12 +1791,10 @@ table {
     overflow-y: auto;
 }
 
-/* Стили для кнопок показа кода */
 .demo-controls .show-code-btn {
     margin-top: 0.5rem;
 }
 
-/* Анимация появления кода */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1881,9 +1811,6 @@ table {
     animation: fadeIn 0.3s ease-out;
 }
 
-/* Дополнительные стили для секции дизайна */
-
-/* Подсказки в принципах */
 .principle-tip {
     margin-top: 10px;
     padding: 8px 12px;
@@ -1898,7 +1825,6 @@ table {
     color: var(--primary-color);
 }
 
-/* Практические примеры */
 .design-examples {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
@@ -1957,7 +1883,6 @@ table {
     margin-bottom: 1rem;
 }
 
-/* Демонстрация цветовой гармонии */
 .color-swatch {
     width: 50px;
     height: 50px;
@@ -1982,14 +1907,12 @@ table {
     background-color: var(--text-muted);
 }
 
-/* Демонстрация типографии */
 .typography-sample {
     text-align: center;
     padding: 1rem;
     width: 100%;
 }
 
-/* Демонстрация отступов */
 .spacing-example {
     display: flex;
     justify-content: space-around;
@@ -2008,7 +1931,6 @@ table {
     transition: all 0.3s ease;
 }
 
-/* Кнопки CTA */
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -2025,7 +1947,6 @@ table {
     background: linear-gradient(45deg, #7209b7, var(--accent-color));
 }
 
-/* Кнопки в примерах */
 .change-palette-btn,
 .change-typography-btn,
 .adjust-spacing-btn {
@@ -2040,13 +1961,9 @@ table {
     background: linear-gradient(45deg, #1d7873, #2a9d8f) !important;
 }
 
-/* Дополнительные стили для секции дизайна - Исправленные */
-
-/* Контейнер для демонстрации отступов - теперь с ограничениями */
 .spacing-visual-container {
     padding: 15px;
     overflow: hidden;
-    /* Предотвращает выход за границы */
 }
 
 .spacing-example {
@@ -2054,9 +1971,7 @@ table {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* Позволяет перенос на новую строку */
     gap: 10px;
-    /* Базовый отступ между элементами */
     width: 100%;
     padding: 10px;
     transition: gap 0.3s ease;
@@ -2072,12 +1987,9 @@ table {
     font-weight: 600;
     transition: all 0.3s ease;
     flex: 0 0 auto;
-    /* Запрещает растягивание */
     max-width: 120px;
-    /* Ограничивает максимальную ширину */
 }
 
-/* Информация об отступах */
 .spacing-info {
     margin-top: 8px;
     padding: 4px 8px;
@@ -2087,7 +1999,6 @@ table {
     color: var(--text-muted);
 }
 
-/* Демонстрация консистентности */
 .consistency-example {
     display: flex;
     flex-direction: column;
@@ -2139,7 +2050,6 @@ table {
     color: var(--text-muted);
 }
 
-/* Адаптивность для мобильных */
 @media (max-width: 768px) {
     .spacing-example {
         gap: 5px;
@@ -2164,7 +2074,6 @@ table {
     }
 }
 
-/* Для очень маленьких экранов */
 @media (max-width: 480px) {
     .mobile-header {
         padding: 0.6rem 0.8rem;
@@ -2173,7 +2082,6 @@ table {
     .mobile-header .header-text {
         font-size: 0.85rem;
         max-width: calc(100% - 55px);
-        /* Еще меньше на очень маленьких экранах */
     }
 
     .sidebar-toggle {
@@ -2182,17 +2090,14 @@ table {
     }
 }
 
-/* Специальные исправления для горизонтального скролла */
 @media (max-width: 768px) {
 
-    /* Принудительно скрываем горизонтальный скролл */
     body,
     html {
         overflow-x: hidden !important;
         position: relative;
     }
 
-    /* Фиксируем все возможные элементы */
     .content-card,
     .demo-box,
     .example-container,
@@ -2203,7 +2108,6 @@ table {
         overflow-x: hidden !important;
     }
 
-    /* Особое исправление для flexbox и grid контейнеров */
     .flex-container,
     .grid-container {
         max-width: 100vw !important;
